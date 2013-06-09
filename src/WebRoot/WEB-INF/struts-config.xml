@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+	<form-beans>
+		<form-bean name="userLoginForm" type="com.smj.web.form.UserLoginForm" />
+		<form-bean name="registerForm" type="com.smj.web.form.RegisterForm" />
+	</form-beans>
+	<global-exceptions /> 
+	<global-forwards>
+	  	  <forward name="info" path="/commons/info.jsp" />	
+	</global-forwards>
+	<action-mappings>
+		<action attribute="userLoginForm" input="/user/index.jsp" name="userLoginForm"
+			parameter="method" path="/userAction" scope="request"
+			type="com.sugu.snack.web.action.UserAction">
+			<forward name="register" path="/user/register.jsp" />
+			<forward name="userInfo" path="/user/userInfo.jsp" />
+		</action>
+		
+		<action attribute="registerForm" input="/user/register.jsp" name="registerForm"
+			parameter="method" path="/registerAction" scope="request"
+			type="com.sugu.snack.web.action.RegisterAction">
+			<forward name="index" path="/user/index.jsp" />
+			<forward name="register" path="/user/register.jsp" />
+		</action>
+	</action-mappings>
+
+
+
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+
+	<message-resources parameter="ApplicationResources" />
+
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="classpath:applicationContext.xml" />
+	</plug-in>
+
+</struts-config>

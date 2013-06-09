@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+/*========= main content =========*/
+/* 餐馆公告 */
+.notebox {margin:0 auto 10px; width:920px; background:url(../images/notebgc.gif) repeat-x; height:34px;}
+.notebox .lft {background:url(../images/notebga.gif) no-repeat; width:6px;}
+.notebox .rgt {background:url(../images/notebgb.gif) no-repeat; width:6px;}
+.notebox .tit {width:85px; font-weight:bold; color:#D84600; text-align:center;}
+.notebox .conlist1 {background:url(../images/notenum1.gif) 0 10px no-repeat; padding-left:16px;}
+.notebox .conlist2 {background:url(../images/notenum2.gif) 0 10px no-repeat; padding-left:16px;}
+.notebox .conlist3 {background:url(../images/notenum3.gif) 0 10px no-repeat; padding-left:16px;}
+.notebox a, .notebox a:visited {color:#D84600;}
+.notebox span {color:#999;}
+/* 餐馆评价 */
+.subtopnav {margin:0 auto 10px; width:920px; background:url(../images/subtopbgc.gif) repeat-x; height:47px;}
+.subtopnav .lft {background:url(../images/subtopbga.gif) no-repeat; width:6px;}
+.subtopnav .rgt {background:url(../images/subtopbgb.gif) no-repeat; width:6px;}
+.subtopnav p.rgttxt {background:url(../images/subtopquest.gif) no-repeat; height:19px; line-height:22px; padding-left:70px;}
+.subtopnav p.rgttxt a, .subtopnav p.rgttxt a:visited {color:#3282b5; text-decoration:underline;}
+.subtopnav p.rgttxt a:hover {color:#f00; text-decoration:underline;}
+/* 用户信息 */
+.usernav,.billnav{margin:0 auto 10px;width:877px; height:36px; line-height:40px; padding:0 20px; background:#fffdd7; border:#fad66d 1px solid; color:#000;}
+.usernav a.normlink, .usernav a.normlink:visited {color:#233b47;}
+.usernav a.normlink:hover {color:#06f;}
+/* 订单搜索 */
+.billnav {width:722px;}
+/* 餐馆列表 */
+.shopdetail1, .shopdetail2 {padding:10px; border:#b8d6e7 1px solid; background:#f2fafd; color:#666;width:880px;height:110px;line-height:20px;float:left;margin-left:4px;}
+.shopdetail2 {background:#fffdd7; border:#fad66d 1px solid; cursor:pointer;}
+.shopdetail1 h4, .shopdetail2 h4 {margin:0; font-size:12px; color:#f95808;}
+/* 我的餐车 */
+.caicarnav {margin-bottom:20px;}
+.caicarnav .titnav {height:33px; background:url(../images/caicartitbgc.gif) repeat-x; overflow:hidden;}
+.caicarnav .titnav .lft {width:5px; height:33px; background:url(../images/caicartitbga.gif) no-repeat; float:left;}
+.caicarnav .titnav .rgt {width:5px; height:33px; background:url(../images/caicartitbgb.gif) top no-repeat; float:right;}
+.caicarnav .titnav .tit {padding-left:10px; width:300px; height:33px; overflow:hidden; float:left;}
+.caicarnav .titnav .tit a {float:left; background:url(../images/caicartitlibga.gif) top left no-repeat; height:33px;}
+.caicarnav .titnav .tit a span {padding:0 10px 0 35px; float:left; background:url(../images/caicartitlibgb.gif) top right no-repeat; height:33px; line-height:36px; font-size:14px; font-weight:bold; display:block; color:#dd4a00;}
+.caicarnav .titnav .txt {float:right; height:32px; line-height:34px; color:#999; padding-right:10px;}
+.caicarnav .connav {border-left:#dae1e7 1px solid; border-right:#dae1e7 1px solid; background:#fff; padding:10px;}
+.caicarnav .botnav {height:4px; background:url(../images/grayboxbotbgc.gif) top repeat-x; overflow:hidden;}
+.caicarnav .botnav .lft {width:4px; height:4px; background:url(../images/grayboxbotbga.gif) top no-repeat; float:left;}
+.caicarnav .botnav .rgt {width:4px; height:4px; background:url(../images/grayboxbotbgb.gif) top no-repeat; float:right;}
+/* 订单、餐车 */
+.caicardetail {border-collapse:collapse; color:#233b47;}
+.caicardetail td {height:21px; padding:4px 5px 0;}
+.caicardetail td.tit {font-weight:bold; color:#000; background:url(../images/caicarcontdtitbg.gif) left no-repeat;}
+.caicardetail td.bot {background:#fffdd7; text-align:right; color:#000;}
+.caicardetail td.bot a.dellink, .caicardetail td.bot a.dellink:visited {color:#000; text-decoration:underline; float:left;}
+.caicardetail td.bot a.dellink:hover {color:#f00;}
+.caicardetail td.bill {background:#fffdd7; text-align:left; color:#000;}
+p.nextbtnnav {margin-top:14px; text-align:center;}
+/* 店铺头 */
+.caititnav {padding:5px; border:#b8d6e7 1px solid; background:#f2fafd; color:#666; height:135px;line-height:22px; overflow:hidden;margin-bottom:5px;}
+.caititnav .shopname {font-size:14px; font-weight:bold; text-decoration:underline; color:#0069b5;}
+.caititnav .linebar {padding-right:33px; background:url(../images/linebarimg.gif) right no-repeat;}
+.caititnav a.backshoplist, .caititnav a.backshoplist:visited, .caititnav a.backshoplist:hover {float:right; color:red;}
+/* 菜单 */
+.cailistnav {padding:0 10px 5px;}
+.cailistnav h4 {margin:5px 0 0; height:24px; line-height:22px; overflow:hidden; font-size:12px; font-weight:bold; color:#393; background:url(../images/caiclassicon.gif) 5px 5px no-repeat; border-bottom:#393 1px solid; padding-left:20px;}
+.cailistnav ul {margin:5px 10px 10px; _margin:5px 10px 10px -10px;}
+.cailistnav ul li {margin:0 10px; padding:0 5px; float:left; width:29.8%; *width:30%; height:25px; line-height:26px; overflow:hidden; border-bottom:#ccc 1px dashed; cursor:pointer; text-align:right;}
+.cailistnav ul li span.cainame {float:left;}
+.cailistnav ul li span.goshop {color:#0069b5; text-decoration:underline;}
+.cailistnav ul div {border:1px solid #ff8e00;background-color:#fff;position:absolute;width:232px;height:105px;}
+.cailistnav ul div .div_pic {width:132px;height:102px;}
+/* 发言板 */
+.writebooknav {margin:0 auto 10px; width:916px; padding:1px; border:#d9e2e7 1px solid; overflow:hidden;}
+.writebooknav .tablebox {padding:8px 60px 0; background:url(../images/gbookwritebg.gif) #fff repeat-x; }
+.writebooknav .tablebox .td {padding:0 0 8px;color:#184d75;}
+.writebooknav .tablebox .inviteipt {padding:3px; height:17px; font-size:13px; font-family:Verdana, Geneva, sans-serif; background:#fff; border:#aec1cf 1px solid;}
+.writebooknav .tablebox .invitesubmit {width:70px; height:28px; line-height:30px; font-size:14px; font-weight:bold; color:#47749b; background:url(../images/btnbg1.gif) no-repeat; border:0;}
+.writebooknav .tablebox .invitetarea {width:790px;height:80px;line-height:18px;border:1px solid #aec1cf;font-size:12px;vertical-align:top;padding:5px;color:#000; overflow:auto;}
+.writebooknav .tablebox a.reglink, .writebooknav .tablebox a.reglink:visited {font-size:14px; font-weight:bold; color:#f75709; text-decoration:none;}
+.writebooknav .tablebox a.reglink:hover {text-decoration:underline;}
+/* 留言板 */
+.booklistnav {margin:0 auto 10px; width:918px; border-collapse:collapse; color:#233a42; border:#d9e2e7 1px solid;}
+.booklistnav .writeuser {padding:10px 20px 8px 35px; background:url(../images/gbookarrowa.gif) #f6f6f6 20px 13px no-repeat; border-bottom:#d9e2e7 1px solid;}
+.booklistnav .writeuser h4 {margin:0; font-size:12px; font-weight:normal;}
+.booklistnav .writeuser span.time {float:right; color:#888;}
+.booklistnav .writeuser p {color:#000;}
+.booklistnav .replyuser {padding:10px 20px 8px 35px; background:url(../images/gbookarrowb.gif) 20px 13px no-repeat;}
+.booklistnav .replyuser h4 {margin:0; font-size:12px; font-weight:normal;}
+.booklistnav .replyuser span.time {float:right; color:#888;}
+.booklistnav .replyuser p {color:#0069b5;}
+/* 图片 */
+.Dingcan-btn{background:url(../images/shopImages.png) no-repeat 0 0px;height:34px;width:119px;border:0;}
+.Dingcan-btn:hover{background:url(../images/shopImages.png) no-repeat 0 -42px;height:34px;width:119px;}
+.DHDingcan-btn{background:url(../images/shopImages.png) no-repeat -66px -217px;height:34px;width:119px;border:0;}
+.DHDingcan-btn:hover{background:url(../images/shopImages.png) no-repeat -66px -258px;height:34px;width:119px;}
+.Xiuxi-btn{background:url(../images/shopImages.png) no-repeat 0 -113px;height:20px;width:41px;border:0;}
+.Yingye-btn{background:url(../images/shopImages.png) no-repeat 0 -85px;height:20px;width:41px;border:0;}
+.Chengxin-btn{background:url(../images/shopImages.png) no-repeat 0 -188px;height:18px;width:24px;border:0;}
+.Jifen-btn{background:url(../images/shopImages.png) no-repeat 0 -212px;height:18px;width:24px;border:0;}
+.qq-btn{background:url(../images/shopImages.png) no-repeat 0 -138px;height:18px;width:22px;border:0;}
+.Dianhua-btn{background:url(../images/shopImages.png) no-repeat 0 -162px;height:18px;width:24px;border:0;}
+.PingfenA-btn{background:url(../images/shopImages.png) no-repeat 0 -296px;height:15px;width:70px;border:0;}
+.PingfenB-btn{background:url(../images/shopImages.png) no-repeat -70px -296px;height:15px;width:70px;border:0;}
+.PingfenC-btn{background:url(../images/shopImages.png) no-repeat 0 -310px;height:15px;width:70px;border:0;}
+.PingfenD-btn{background:url(../images/shopImages.png) no-repeat -70px -310px;height:15px;width:70px;border:0;}
+.PingfenE-btn{background:url(../images/shopImages.png) no-repeat 0 -325px;height:15px;width:70px;border:0;}
+.PingfenF-btn{background:url(../images/shopImages.png) no-repeat -70px -325px;height:15px;width:70px;border:0;}
+.PingfenG-btn{background:url(../images/shopImages.png) no-repeat 0 -339px;height:15px;width:70px;border:0;}
+.PingfenH-btn{background:url(../images/shopImages.png) no-repeat -70px -339px;height:15px;width:70px;border:0;}
+.PingfenI-btn{background:url(../images/shopImages.png) no-repeat 0 -353px;height:15px;width:70px;border:0;}
+.PingfenJ-btn{background:url(../images/shopImages.png) no-repeat -70px -353px;height:15px;width:70px;border:0;}
+.PingfenK-btn{background:url(../images/shopImages.png) no-repeat 0 -367px;height:15px;width:70px;border:0;}
+.Qisong-btn{background:url(../images/shopImages.png) no-repeat 0 -236px;height:17px;width:17px;border:0;}
+.Shijian-btn{background:url(../images/shopImages.png) no-repeat 0 -256px;height:17px;width:17px;border:0;}
+.Gonggao-btn{background:url(../images/shopImages.png) no-repeat 0 -278px;height:17px;width:17px;border:0;}
+.Zhekou-btn{background:url(../images/shopImages.png) no-repeat -135px -162px;height:14px;width:25px;border:0;}
+.Kouwei1-btn{background:url(../images/shopImages.png) no-repeat -133px -136px;height:20px;width:20px;border:0;}
+.Kouwei2-btn{background:url(../images/shopImages.png) no-repeat -135px -16px;height:20px;width:20px;border:0;}
+.Kouwei3-btn{background:url(../images/shopImages.png) no-repeat -135px -40px;height:20px;width:20px;border:0;}
+.Kouwei4-btn{background:url(../images/shopImages.png) no-repeat -135px -63px;height:20px;width:20px;border:0;}
+.Kouwei5-btn{background:url(../images/shopImages.png) no-repeat -135px -110px;height:20px;width:20px;border:0;}
+.Kouwei6-btn{background:url(../images/shopImages.png) no-repeat -135px -88px;height:20px;width:20px;border:0;}
+.Dizhi-btn{background:url(../images/shopImages.png) no-repeat -135px 0;height:16px;width:16px;border:0;}
+.Waisong-btn{background:url(../images/shopImages.png) no-repeat -138px -196px;height:16px;width:16px;border:0;}
+.Zhifu-btn{background:url(../images/shopImages.png) no-repeat -138px -177px;height:16px;width:16px;border:0;}

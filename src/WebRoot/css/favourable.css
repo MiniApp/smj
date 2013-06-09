@@ -1,0 +1,16 @@
+@charset "utf-8";
+body,div,img,h2,h3{margin:0;padding:0;border:0;}
+body{color:#595959;font-family:Verdana,Tahoma,Helvetica,Arial,"宋体";font-size:12px;line-height:22px;background-color:#fff;}
+.box{*zoom:1;}
+#promos_printframe{width:602px;margin:0 auto;}
+#promos_printframe #promos_detail2{margin-bottom:0;}
+#promos_printframe #promos_detail2 .header{background:none;}
+#promos_printframe #promos_desc{border:solid #cdd6dd;border-width:0 1px 1px 1px;padding:0 17px 25px 17px;}
+#promos_printframe #promosChange #promos_desc{border:0;}
+#promos_detail2 h2{display:inline;float:left;font:normal 24px/52px "Microsoft YaHei","微软雅黑",Tahoma,Verdana,Geneva,sans-serif;}
+#promos_detail2 .btns{display:inline;float:right;padding:10px 8px 0 0;line-height:31px;}
+.toPut{background:url("../images/print.png") no-repeat;display:block;height:27px;text-indent:-9999px;width:92px;overflow:hidden;}
+.footer {margin:-10px auto 10px; width:920px; padding:10px 0; border-top:#dae1e7 1px solid; color:#888; text-align:center;}
+.footer span {font-family:verdana;font-size:11px;}
+.footer a, .footer a:visited {color:#888; text-decoration:none;}
+.footer a:hover {color:#888; text-decoration:underline;}
