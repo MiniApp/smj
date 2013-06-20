@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="smj"
+  name="snack"
   id="myeclipse.1369660544411"
-  context-root="/smj"
-  j2ee-spec="5.0"
-  archive="smj.war">
+  context-root="/snack"
+  j2ee-spec="6.0"
+  archive="snack.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />
   </attributes>
