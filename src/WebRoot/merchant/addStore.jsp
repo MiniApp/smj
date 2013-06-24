@@ -102,8 +102,8 @@
 </td></tr></table>
 <%@include file="footer.jsp" %>
 <script type="text/javascript">
-
-	function check(){
+	
+	function check(){/*
 		var store_name = document.getElementById('store_name').value;
 		if(store_name==""){
 			alert("店铺名称未填写！");
@@ -156,7 +156,7 @@
 		if(serve.length>100||serve.length<2){
 			alert("服务承诺请控制在2到100字以内！");
 			return;
-		}
+		}*/
 		document.myform.submit();
 	}
 </script>

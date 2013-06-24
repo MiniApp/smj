@@ -1,75 +1,97 @@
 package com.smj.orm;
 
+
+
 /**
  * Region entity. @author MyEclipse Persistence Tools
  */
 
-public class Region implements java.io.Serializable {
+public class Region  implements java.io.Serializable {
 
-	// Fields
 
- 	private String classId;
-	private String parentId;
-	private Integer childNumber;
-	private String name;
-	private Boolean deleted;
+    // Fields    
 
-	// Constructors
+     private Integer regionId;
+     private String classId;
+     private String parentId;
+     private Integer childNum;
+     private String name;
+     private Integer deleted;
 
-	/** default constructor */
-	public Region() {
-	}
 
-	/** full constructor */
-	public Region(String classId, String parentId, Integer childNumber,
-			String name, Boolean deleted) {
-		this.classId = classId;
-		this.parentId = parentId;
-		this.childNumber = childNumber;
-		this.name = name;
-		this.deleted = deleted;
-	}
+    // Constructors
 
- 
+    /** default constructor */
+    public Region() {
+    }
 
-	public String getClassId() {
-		return this.classId;
-	}
+    
+    /** full constructor */
+    public Region(String classId, String parentId, Integer childNum, String name, Integer deleted) {
+        this.classId = classId;
+        this.parentId = parentId;
+        this.childNum = childNum;
+        this.name = name;
+        this.deleted = deleted;
+    }
 
-	public void setClassId(String classId) {
-		this.classId = classId;
-	}
+   
+    // Property accessors
 
-	public String getParentId() {
-		return this.parentId;
-	}
+    public Integer getRegionId() {
+        return this.regionId;
+    }
+    
+    public void setRegionId(Integer regionId) {
+        this.regionId = regionId;
+    }
 
-	public void setParentId(String parentId) {
-		this.parentId = parentId;
-	}
+    public String getClassId() {
+        return this.classId;
+    }
+    
+    public void setClassId(String classId) {
+        this.classId = classId;
+    }
 
-	public Integer getChildNumber() {
-		return this.childNumber;
-	}
+    public String getParentId() {
+        return this.parentId;
+    }
+    
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
 
-	public void setChildNumber(Integer childNumber) {
-		this.childNumber = childNumber;
-	}
+    public Integer getChildNum() {
+        return this.childNum;
+    }
+    
+    public void setChildNum(Integer childNum) {
+        this.childNum = childNum;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public Integer getDeleted() {
+        return this.deleted;
+    }
+    
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+   
 
-	public Boolean getDeleted() {
-		return this.deleted;
-	}
 
-	public void setDeleted(Boolean deleted) {
-		this.deleted = deleted;
-	}
+
+
+
+
+
 
 }

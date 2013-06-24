@@ -295,14 +295,14 @@ public class RegisterAction extends BaseAction {
 			user.setRadomStr2(emailstr);
 
 			UserAddress adress = new UserAddress();
-			adress.setAddress2(address);
-			adress.setAddress1(provincename + "" + cityname + "" + regionname+"  "+address);
-			adress.setUserId(dataid);
-			adress.setIsdefault("Y");
+			//adress.setAddress2(address);
+			//adress.setAddress1(provincename + "" + cityname + "" + regionname+"  "+address);
+			//adress.setUserId(dataid);
+			//adress.setIsdefault("Y");
 
 			try {
 				dataid = userDao.save(user);
-				 adress.setUserId(dataid);
+				 //adress.setUserId(dataid);
 				 addressDao.save(adress);
 				 int cookieTime = Common.intval(request.getParameter("cookietime"));
 					String authCode = Common.authCode(user.getUserPwd()+ "\t" + user.getUserId(), "ENCODE", null, 0);

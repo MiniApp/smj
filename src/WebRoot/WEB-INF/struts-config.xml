@@ -26,6 +26,11 @@
 			<forward name="index" path="/user/index.jsp" />
 			<forward name="register" path="/user/register.jsp" />
 		</action>
+		<action
+			parameter="method" path="/merchantAction" scope="request"
+			type="com.sugu.snack.web.action.RegisterAction">
+			<forward name="storeAdd" path="/merchant/addStore.jsp" />
+		</action>
 	</action-mappings>
 
 
