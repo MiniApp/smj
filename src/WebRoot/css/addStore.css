@@ -1,9 +1,0 @@
-@charset "utf-8";
-/* CSS Document */
-/* 开通店铺 */
-#addStore{margin-top:30px;}
-.openStore{padding-left:20px;}
-.addStoreInfoName{display:block; width:80px;}
-.inputStyle{
-	display:block;float:left;width:100px;
-}
