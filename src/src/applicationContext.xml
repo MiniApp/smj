@@ -119,6 +119,8 @@
  	    <property name="userDao" ref="userDao"></property>   
  	     <property name="regionDao" ref="regionDao"></property>   
   	</bean>   
+  	<bean name="/merchantAction" class="com.smj.web.action.MerchantAction">   
+  	</bean>  
     
       <bean id="regionDao" class="com.smj.dao.impl.RegionDaoImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
