@@ -30,7 +30,7 @@
 	</div>
 	<div class="footer">
 		<span>本站所有店铺图片资料及文字资料未经书面许可 不得转载 违者必究</span><br/>
-	    <span>&copy;2012</span>&nbsp;&nbsp;www.sunbyway.com&nbsp;&nbsp;<a href="http://www.sugu-tech.com">数谷科技</a> 版权所有<br/>&nbsp;津ICP备11002201号
+	    <span>&copy;2013</span>&nbsp;&nbsp;www.songmeijia.com&nbsp;&nbsp;<a href="http://www.songmeijia.com">腾龙信息技术</a> 版权所有<br/>&nbsp;蜀ICP备XXXXXX号
 	    <script type="text/javascript">
 			var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 			document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F54d36f4bc1eebb8e4f8e02e93842d7ad' type='text/javascript'%3E%3C/script%3E"));
