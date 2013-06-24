@@ -1,3 +1,11 @@
+/* 开通店铺 */
+#addStore{margin-top:30px;}
+.openStore{padding-left:20px;}
+.addStoreInfoName{display:block; width:80px;}
+.inputStyle{
+	display:block;float:left;width:100px;
+}
+/*
 td {
 	font-size: 12px;
 	color: #5A5A5A;
@@ -76,4 +84,4 @@ a:hover {
 }
 .req{
 	color: #FF0000;	
-}
+}*/
