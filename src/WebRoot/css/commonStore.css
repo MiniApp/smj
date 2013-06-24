@@ -1,0 +1,8 @@
+@charset "utf-8";
+.footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;}
+.subfooter{width:920px; height:120px;padding:20px 0 10px 60px;}
+.subfooter dl{float:left;width:165px;margin-right:48px;display:inline}
+.subfooter dt{font-size:15px;padding:0 0 4px 4px;margin-bottom:2px;border-bottom:solid 1px #eaeaea;font-family:"\5FAE\8F6F\96C5\9ED1";color:#424242;font-weight:bold}
+.subfooter dd{padding-left:14px;background:url(../images/hd-sp.gif) -251px -618px no-repeat;line-height:24px;*font-family:\5b8b\4f53}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.clearfix{display:inline-block}/*\*/* html .clearfix{height:1%}.clearfix{display:block}
