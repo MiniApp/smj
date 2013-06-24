@@ -9,8 +9,7 @@
 <meta name="Keywords" content="sunbyway,天津快餐,天津外卖,天津订餐,天津送餐,天津美食,天津小吃,外卖网,送餐网,快餐,盒饭,网上订餐,天津24小时外卖,外卖电话,盒饭配送,快餐外卖,快餐送餐,尚佰味网,尚佰味" />
 <link rel="shortcut icon" href="${ctx}/favicon.ico"/>
 <link href="${ctx}/css/global.css" rel="stylesheet" type="text/css" />
-<link href="${ctx}/css/commonStore.css" rel="stylesheet" type="text/css" />
-<link href="${ctx}/css/addStore.css" rel="stylesheet" type="text/css" />
+<link href="${ctx}/css/merchant.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <%@include file="top.jsp" %>
