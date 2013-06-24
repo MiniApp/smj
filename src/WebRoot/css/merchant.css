@@ -7,7 +7,7 @@
 }
 
 /* 底部公共区域 */
-.footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;}
+.footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;background:url(../images/hd-sp.gif) repeat-x 0 -929px}
 .subfooter{width:920px; height:120px;padding:20px 0 10px 60px;}
 .subfooter dl{float:left;width:165px;margin-right:48px;display:inline}
 .subfooter dt{font-size:15px;padding:0 0 4px 4px;margin-bottom:2px;border-bottom:solid 1px #eaeaea;font-family:"\5FAE\8F6F\96C5\9ED1";color:#424242;font-weight:bold}
