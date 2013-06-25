@@ -51,7 +51,7 @@
 *html .allsort .subitem{height:400px;}
 .allsort .close{position:absolute;top:6px;left:474px;z-index:14;width:19px;height:19px;background-position:-216px -125px;cursor:pointer;}
 /*--商品分类End--*/
-/*--商品管理Start--*/
+/*--商品管理Start--*/ 
 .productList{width:780px; height:300px; margin-top:10px; text-align:center; border:1px solid #F60;}
 /*--商品管理End--*/
 /*--底部公共区域Start--*/
