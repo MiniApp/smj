@@ -116,7 +116,7 @@
 					<a class="searchButton" herf="javaScript:toSubmit()"></a>
 				</form>
 			</div>
-			<div class="addBox">
+			<div class="addProductBox">
 				<a class="addProduct">添加商品</a>
 			</div>
 		</div>	
