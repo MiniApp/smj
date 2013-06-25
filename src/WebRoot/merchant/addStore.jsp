@@ -18,7 +18,7 @@
 	<%@include file="/merchant/left.jsp" %>
    	<div id="mainarea">
    	<h2 class="title"><img src="${ctx}/images/space.gif" class="icon7"/>开通店铺</h2>
-   	<form method="post" action="${ctx}/merchantAction.do?method=storeAdd" name="myform" class="c_form">
+   	<form method="post" action="${ctx}/merchantAction.do?method=addStore" name="myform" class="c_form">
         <table cellspacing="0" cellpadding="0" class="formtable">
 			<tr>
 				<th style="width: 10em;">店铺LOGO:</th>
