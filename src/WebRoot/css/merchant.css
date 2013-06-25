@@ -53,7 +53,7 @@
 /*--商品分类End--*/
 /*--商品管理Start--*/
 .productList{width:780px; height:300px; margin-top:10px; text-align:center; border:1px solid #F60;}
-
+/*--商品管理End--*/
 /*--底部公共区域Start--*/
 .footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;background:url(../images/hd-sp.gif) repeat-x 0 -929px;}
 .subfooter{width:920px; height:120px;padding:20px 0 10px 60px;}
