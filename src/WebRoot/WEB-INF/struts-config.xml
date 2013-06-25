@@ -28,8 +28,10 @@
 		</action>
 		<action
 			parameter="method" path="/merchantAction" scope="request"
-			type="com.sugu.snack.web.action.RegisterAction">
-			<forward name="storeAdd" path="/merchant/addStore.jsp" />
+			type="com.smj.web.action.MerchantAction">
+			<forward name="addStore" path="/merchant/addStore.jsp" />
+			<forward name="getStoreInfo" path="/merchant/storeInfo.jsp" />
+			<forward name="productManager" path="/merchant/productManager.jsp" />
 		</action>
 	</action-mappings>
 
