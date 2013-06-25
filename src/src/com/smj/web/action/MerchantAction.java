@@ -1,8 +1,5 @@
 package com.smj.web.action;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,6 +15,7 @@ import org.apache.struts.action.ActionMapping;
  * 功能描述：
  * <li>开通店铺-addStore</li>
  * <li>店铺信息-getStoreInfo</li>
+ * <li>商品管理-productManager</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -72,4 +70,19 @@ public class MerchantAction extends BaseAction {
 		logger.debug("MerchantAction.updateStoreInfo end");
 		return forward;
 	}
+	/**
+	 * 商品管理
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-25
+	 */
+	public ActionForward productManager(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.productManager start");
+		ActionForward forward = mapping.findForward("productManager");
+		logger.debug("MerchantAction.productManager end");
+		return forward;
+	}
+	
 }
