@@ -92,7 +92,7 @@ a:hover {color:#f60; text-decoration:underline;}
 
 #wrap{margin:0 auto;width:920px;}
 #main {margin: 0 0 20px;width:140px;background:url(image/appSidebar_bg.gif) repeat-y 0 0;overflow:hidden;float:left;}
-#mainarea {margin-left:10px;width:760px;overflow:hidden;float:left;padding:5px;}
+#mainarea {margin-left:10px;width:760px;float:left;padding:5px;}
 #app_sidebar {margin: 0 20px 0 0; padding: 10px 0 0; width: 140px; background: url(image/appSidebar_top_bg.gif) no-repeat 0 0; font-size: 14px; }
 #app_sidebar .topline { border-top: 1px dashed #CCC; }
 .app_list { margin: 0 10px 0 10px; padding: 5px 5px 0 5px; overflow: hidden; }
