@@ -4,7 +4,7 @@
    	<ul class="app_list">
    		<li><img src="${ctx}/images/space.gif" class="icon8"/><a href="${ctx}/merchantAction.do?method=affL">订单管理</a></li>
     	<li><img src="${ctx}/images/space.gif" class="icon2"/><a href="${ctx}/merchantAction.do?method=dishList">公告管理</a></li>
-    	<li><img src="${ctx}/images/space.gif" class="icon4"/><a href="${ctx}/merchantAction.do?method=storeSign">商品管理</a></li>
+    	<li><img src="${ctx}/images/space.gif" class="icon4"/><a href="${ctx}/merchantAction.do?method=productManager">商品管理</a></li>
     	<li><img src="${ctx}/images/space.gif" class="icon5"/><a href="${ctx}/merchantAction.do?method=userapp">评价管理</a></li>
      	<li><img src="${ctx}/images/space.gif" class="icon6"/><a href="${ctx}/merchantAction.do?method=leaveWord">留言管理</a></li>
     </ul>
