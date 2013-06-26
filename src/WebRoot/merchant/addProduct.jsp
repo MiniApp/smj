@@ -132,7 +132,7 @@
 				<th style="width: 10em;">&nbsp;</th>
 				<td>
 					<input type="button" name="button" onclick="check();" value=" 保 存 " class="submit" />
-					<input type="button" name="button" onclick="check();" value=" 返 回 " class="submit" />
+					<input type="button" name="button" onclick="javascript:history.back()" value=" 返 回 " class="submit" />
 				</td>
 				<td>&nbsp;</td>
 			</tr>
