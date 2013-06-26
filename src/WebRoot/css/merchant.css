@@ -60,7 +60,7 @@
 .productList .productInfo .productOperation a{display:block; float:left; width:60px;}
 /*--商品管理End--*/
 
-/*--订单管理Start--*/ 
+/*--订单管理Start--*/
 .searchTime, .searchCusOrOrderNum, .searchSubmitBtn{float:left;margin-right:5px;}
 .orderList{clear:both;width:100%;margin-top:30px;}
 .orderList table{border-collapse:collapse;width:100%; border:1px solid #F60;}
