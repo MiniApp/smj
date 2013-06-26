@@ -61,7 +61,7 @@
 /*--商品管理End--*/
 
 /*--订单管理Start--*/
-.orderSearch{width:780px;height:50px;line-height:50px;padding-left:5px;background:url(../images/nav-sort.gif);background-position:0 1px;background-repeat:repeat-x;margin:0;-moz-border-radius:5px 5px 5px 5px;-webkit-border-radius:5px 5px 5px 5px;}
+.orderSearch{width:780px;height:50px;line-height:50px;padding-left:5px;background:url(../images/nav-sort.gif);background-position:0 1px;background-repeat:repeat-x;margin:0;-moz-border-radius:5px;-webkit-border-radius:5px;}
 .searchTime, .searchCusOrOrderNum, .searchSubmitBtn, .searchSubmitBtnIn{float:left;margin-right:5px;}
 .searchTime span, .searchCusOrOrderNum span, .searchSubmitBtn{color:#FFF;}
 .searchSubmitBtnIn { height: 20px; margin:15px auto; border: none; background: #FF8901; color: #FFF; line-height: 18px; text-align:center; letter-spacing: 1px; cursor: pointer; }
