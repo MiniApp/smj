@@ -123,7 +123,7 @@
 				</form>
 			</div>
 			<div class="addProductBox">
-				<a class="addProduct" herf="javascript:jquerySubmit()">添加商品</a>
+				<a class="addProduct" herf="${ctx}/merchantAction.do?method=addProduct">添加商品</a>
 			</div>
 		</div>	
 		<div class="productList">
