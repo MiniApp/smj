@@ -88,6 +88,20 @@ public class MerchantAction extends BaseAction {
 	}
 	
 	/**
+	 * 商品查询
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-26
+	 */
+	public ActionForward queryProduct(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.queryProduct start");
+		ActionForward forward = mapping.findForward("productManager");
+		logger.debug("MerchantAction.queryProduct end");
+		return forward;
+	}
+	/**
 	 * 商品添加
 	 * 
 	 * @author 苏皓
