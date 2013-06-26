@@ -119,13 +119,13 @@
 			<div class="searcbox">
 				<form id="searchForm" action="${ctx}/merchantAction.do?method=queryProduct" method="post">
 					<input type="text" name="searchProduct" class="searcboxContent"/>
-					<a class="searchButton" herf="javascript:jquerySubmit()"></a>
+					<a class="searchButton" href="javascript:jquerySubmit()"></a>
 				</form>
 			</div>
 			<div class="addProductBox">
-				<a class="addProduct" herf="${ctx}/merchantAction.do?method=addProduct">添加商品</a>
+				<a class="addProduct" href="${ctx}/merchantAction.do?method=addProduct">添加商品</a>
 			</div>
-		</div>	
+		</div>
 		<div class="productList">
 			<div class="productInfo">
 				<div class="productImg"></div>
