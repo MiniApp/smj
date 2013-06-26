@@ -130,83 +130,90 @@
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 			<div class="productInfo">
 				<div class="productImg"></div>
 				<div class="productOperation">
 					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
-					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1" class="delLink">删除</a>
 				</div>
 			</div>
 		</div>
 		<script type="text/javascript"> 
-		$(".allsort").hoverForIE6({current:"allsorthover",delay:200});
-		$(".allsort .item").hoverForIE6({delay:150});
+			$(".allsort").hoverForIE6({current:"allsorthover",delay:200});
+			$(".allsort .item").hoverForIE6({delay:150});
+			$(".delLink").click(function() {
+				if (confirm("您确认要删除吗？")){
+					return true;
+				} else {
+					return false;
+				}
+			});
 		</script>
    	</div>
 </div>
