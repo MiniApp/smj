@@ -32,6 +32,7 @@
 			<forward name="addStore" path="/merchant/addStore.jsp" />
 			<forward name="getStoreInfo" path="/merchant/storeInfo.jsp" />
 			<forward name="productManager" path="/merchant/productManager.jsp" />
+			<forward name="addProduct" path="/merchant/addProduct.jsp" />
 		</action>
 	</action-mappings>
 
