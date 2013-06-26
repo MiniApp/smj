@@ -41,6 +41,12 @@
 		};
 	})(jQuery);
 	</script>
+	<script type="text/javascript">
+		function jquerySubmit() {
+			$('#searchForm').submit();
+		}
+
+</script>
 </head>
 <body>
 <%@include file="/user/top.jsp" %>
@@ -113,11 +119,11 @@
 			<div class="searcbox">
 				<form id="searchForm" action="${ctx}/merchantAction.do?method=queryProduct" method="post">
 					<input type="text" name="searchProduct" class="searcboxContent"/>
-					<a class="searchButton" herf="javaScript:toSubmit()"></a>
+					<a class="searchButton" herf="javascript:jquerySubmit()"></a>
 				</form>
 			</div>
 			<div class="addProductBox">
-				<a class="addProduct">添加商品</a>
+				<a class="addProduct" herf="javascript:jquerySubmit()">添加商品</a>
 			</div>
 		</div>	
 		<div class="productList">
@@ -187,10 +193,5 @@
 </td></tr></table>
 <%@include file="footer.jsp" %>
 </body>
-<script type="text/javascript">
-	function toSubmit() {
-		$("#searchForm").submit();
-	}
 
-</script>
 </html>
