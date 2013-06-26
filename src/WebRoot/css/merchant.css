@@ -51,6 +51,7 @@
 *html .allsort .subitem{height:400px;}
 .allsort .close{position:absolute;top:6px;left:474px;z-index:14;width:19px;height:19px;background-position:-216px -125px;cursor:pointer;}
 /*--商品分类End--*/
+
 /*--商品管理Start--*/ 
 .productList{width:780px;overflow:hidden;height:auto; margin-top:10px; text-align:center; border:1px solid #F60;}
 .productList .productInfo{width:120px;height:100px; border:1px solid #000; float:left;margin:17px;}
@@ -58,6 +59,16 @@
 .productList .productInfo .productOperation{text-align:center;height:20px;line-height:20px; border-top:1px solid #000;}
 .productList .productInfo .productOperation a{display:block; float:left; width:60px;}
 /*--商品管理End--*/
+
+/*--订单管理Start--*/
+.searchTime, .searchCusOrOrderNum, .searchSubmitBtn{float:left;}
+.orderList{width:100%;}
+.orderList table{border-collapse:collapse;width:100%; border:1px solid #F60;}
+.orderTd{width:18%; height:30px;text-align:center;border:1px solid #F60;}
+.orderTdAct{width:10%;height:30px;border:1px solid #F60;}
+.orderTbBorder{border:1px dashed #F60;height:20px;}
+/*--订单管理end--*/
+
 /*--底部公共区域Start--*/
 .footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;background:url(../images/hd-sp.gif) repeat-x 0 -929px;}
 .subfooter{width:920px; height:120px;padding:20px 0 10px 60px;}
