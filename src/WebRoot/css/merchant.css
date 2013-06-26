@@ -61,8 +61,8 @@
 /*--商品管理End--*/
 
 /*--订单管理Start--*/
-.searchTime, .searchCusOrOrderNum, .searchSubmitBtn{float:left;}
-.orderList{width:100%;}
+.searchTime, .searchCusOrOrderNum, .searchSubmitBtn{float:left;margin-right:5px;}
+.orderList{clear:both;width:100%;margin-top:30px;}
 .orderList table{border-collapse:collapse;width:100%; border:1px solid #F60;}
 .orderTd{width:18%; height:30px;text-align:center;border:1px solid #F60;}
 .orderTdAct{width:10%;height:30px;border:1px solid #F60;}
