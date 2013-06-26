@@ -24,7 +24,7 @@
    				<div class="searchTime"><span>开始日期：</span><input type="text" /></div>
    				<div class="searchTime"><span>结束日期：</span><input type="text" /></div>
    				<div class="searchCusOrOrderNum"><span>顾客姓名/订单号：</span><input type="text" /></div>
-   				<div class="searchSubmitBtn"><input class="submit" type="submit" value=" 查 询  "/></div>
+   				<div class="searchSubmitBtn"><input class="searchSubmitBtnIn" type="submit" value=" 查 询  "/></div>
    			</form>
    		</div>
 		<div class="orderList">
