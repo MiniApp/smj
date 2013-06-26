@@ -16,6 +16,7 @@ import org.apache.struts.action.ActionMapping;
  * <li>开通店铺-addStore</li>
  * <li>店铺信息-getStoreInfo</li>
  * <li>商品管理-productManager</li>
+ * <li>商品添加-addProduct</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -70,6 +71,7 @@ public class MerchantAction extends BaseAction {
 		logger.debug("MerchantAction.updateStoreInfo end");
 		return forward;
 	}
+	
 	/**
 	 * 商品管理
 	 * 
@@ -85,4 +87,18 @@ public class MerchantAction extends BaseAction {
 		return forward;
 	}
 	
+	/**
+	 * 商品添加
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-26
+	 */
+	public ActionForward addProduct(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.addProduct start");
+		ActionForward forward = mapping.findForward("addProduct");
+		logger.debug("MerchantAction.addProduct end");
+		return forward;
+	}
 }
