@@ -18,7 +18,7 @@
 	<%@include file="/merchant/left.jsp" %>
    	<div id="mainarea">
    	<h2 class="title"><img src="${ctx}/images/space.gif" class="icon7"/>商品添加</h2>
-   	<form method="post" action="${ctx}/merchantAction.do?method=addStore" name="myform" class="c_form">
+   	<form method="post" action="${ctx}/merchantAction.do?method=addProduct" name="myform" class="c_form">
         <table cellspacing="0" cellpadding="0" class="formtable">
 			<tr>
 				<th style="width: 10em;">商品类别:</th>
@@ -124,7 +124,7 @@
 				<th style="width: 10em;">状态:</th>
 				<td>
 					<input type="radio" name="onoff" value="Y" checked="checked" />正常
-					<input type="radio" name="onoff" value="N" />促销</td>
+					<input type="radio" name="onoff" value="N" />促销
 					<input type="radio" name="onoff" value="N" />下架</td>
 				<td>&nbsp;</td>
 			</tr>
