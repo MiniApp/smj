@@ -127,60 +127,81 @@
 			</div>
 		</div>	
 		<div class="productList">
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
-			<div style="width:100px;height:100px; border:1px solid #000; float:left;margin:20px;">
-				<div style="height:80px"></div>
-				<div style="height:20px; border-top:1px solid #000;">
-					<a href="">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="">删除</a>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+				</div>
+			</div>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+				</div>
+			</div>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
+				</div>
+			</div>
+			<div class="productInfo">
+				<div class="productImg"></div>
+				<div class="productOperation">
+					<a href="${ctx}/merchantAction.do?method=updateProduct&productId=1">修改</a>
+					<a href="${ctx}/merchantAction.do?method=deleteProduct&productId=1">删除</a>
 				</div>
 			</div>
 		</div>
