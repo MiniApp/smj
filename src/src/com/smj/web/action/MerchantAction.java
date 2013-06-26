@@ -145,4 +145,19 @@ public class MerchantAction extends BaseAction {
 		logger.debug("MerchantAction.deleteProduct end");
 		return forward;
 	}
+	
+	/**
+	 * 订单查询
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-26
+	 */
+	public ActionForward orderManager(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.orderManager start");
+		ActionForward forward = mapping.findForward("orderManager");
+		logger.debug("MerchantAction.orderManager end");
+		return forward;
+	}
 }
