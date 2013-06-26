@@ -14,7 +14,7 @@
 .searcboxContent{margin:0;padding:0;float:left;border:0;width:258px;height:29px;overflow:hidden;}
 .searchButton{display:block;float:left;margin:0;padding:0;color:#F60;font-size:16px; font-weight:bold; text-align:center;float:left;border:0; background-color:#CCC; width:75px;height:29px;line-height:29px;background:url(../images/hd-sp.gif) -38px -65px;}
 .addProductBox{margin:0;padding:0;margin:10px 0 0 130px;float:left;text-align:center;background-color:#CCC; width:80px;height:29px;line-height:29px;}
-.addProductBox .addProduct{margin:0;padding:0;color:#F60;font-size:16px; font-weight:bold; }
+.addProductBox .addProduct{dislay:block;color:#F60;font-size:16px; font-weight:bold; }
 /*allsort*/
 .allsort{float:left;width:211px;height:50px;background-position:0px -101px;position:relative;z-index:11;}
 .allsort .mt{height:24px;padding:14px 12px 12px 16px;line-height:24px;cursor:pointer;overflow:hidden;}
@@ -31,7 +31,7 @@
 .allsort .item .i-mc{display:none;position:absolute;left:163px;top:0;width:500px;border:1px solid #c30;background:#FFF9EF;overflow:hidden;}
 .allsort .item dt{padding:3px 6px 0 0;font-weight:bold;}
 .allsort .item dd{padding:3px 0 0;overflow:hidden;zoom:1;}
-.allsort .subitem{float:left;width:464px;min-height:400px;padding:0 4px 0 8px;}
+.allsort .subitem{float:left;width:464px;min-height:400px;height:400px;padding:0 4px 0 8px;}
 .allsort .subitem dl{border-top:1px solid #FFEFD7;padding:6px 0;overflow:hidden;zoom:1;}
 .allsort .subitem .fore{border-top:none;}
 .allsort .subitem dt{float:left;width:54px;line-height:22px;text-align:right;color:#c00;}
@@ -52,7 +52,11 @@
 .allsort .close{position:absolute;top:6px;left:474px;z-index:14;width:19px;height:19px;background-position:-216px -125px;cursor:pointer;}
 /*--商品分类End--*/
 /*--商品管理Start--*/ 
-.productList{width:780px; height:300px; margin-top:10px; text-align:center; border:1px solid #F60;}
+.productList{width:780px;overflow:hidden;height:auto; margin-top:10px; text-align:center; border:1px solid #F60;}
+.productList .productInfo{width:120px;height:100px; border:1px solid #000; float:left;margin:17px;}
+.productList .productInfo .productImg{height:80px}
+.productList .productInfo .productOperation{text-align:center;height:20px;line-height:20px; border-top:1px solid #000;}
+.productList .productInfo .productOperation a{display:block; float:left; width:60px;}
 /*--商品管理End--*/
 /*--底部公共区域Start--*/
 .footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;background:url(../images/hd-sp.gif) repeat-x 0 -929px;}
