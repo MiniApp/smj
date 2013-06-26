@@ -1,1 +1,6 @@
 /com
+/extremetable.properties
+/hibernate.cfg.xml
+/log4j.properties
+/ApplicationResources.properties
+/applicationContext.xml
