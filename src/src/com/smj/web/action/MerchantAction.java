@@ -115,4 +115,34 @@ public class MerchantAction extends BaseAction {
 		logger.debug("MerchantAction.addProduct end");
 		return forward;
 	}
+	
+	/**
+	 * 商品修改
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-26
+	 */
+	public ActionForward updateProduct(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.updateProduct start");
+		ActionForward forward = mapping.findForward("updateProduct");
+		logger.debug("MerchantAction.updateProduct end");
+		return forward;
+	}
+	
+	/**
+	 * 商品删除
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-26
+	 */
+	public ActionForward deleteProduct(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.deleteProduct start");
+		ActionForward forward = mapping.findForward("deleteProduct");
+		logger.debug("MerchantAction.deleteProduct end");
+		return forward;
+	}
 }
