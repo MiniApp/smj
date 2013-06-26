@@ -45,8 +45,7 @@
 		function jquerySubmit() {
 			$('#searchForm').submit();
 		}
-
-</script>
+	</script>
 </head>
 <body>
 <%@include file="/user/top.jsp" %>
