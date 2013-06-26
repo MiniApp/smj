@@ -35,6 +35,7 @@
 			<forward name="addProduct" path="/merchant/addProduct.jsp" />
 			<forward name="updateProduct" path="/merchant/updateProduct.jsp" />
 			<forward redirect="true" name="deleteProduct" path="/merchantAction.do?method=productManager"></forward>
+			<forward name="orderManager" path="/merchant/orderManager.jsp" />
 		</action>
 	</action-mappings>
 
