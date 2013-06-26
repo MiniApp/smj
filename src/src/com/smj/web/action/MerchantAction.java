@@ -15,8 +15,12 @@ import org.apache.struts.action.ActionMapping;
  * 功能描述：
  * <li>开通店铺-addStore</li>
  * <li>店铺信息-getStoreInfo</li>
+ * <li>店铺信息修改-updateStoreInfo</li>
  * <li>商品管理-productManager</li>
  * <li>商品添加-addProduct</li>
+ * <li>商品修改-updateProduct</li>
+ * <li>商品删除-deleteProduct</li>
+ * <li>订单查询-orderManager</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -58,7 +62,7 @@ public class MerchantAction extends BaseAction {
 	}
 
 	/**
-	 * 店铺信息
+	 * 店铺信息修改
 	 * 
 	 * @author 苏皓
 	 * @since 2013-06-25
