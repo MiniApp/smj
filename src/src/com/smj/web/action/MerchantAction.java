@@ -219,7 +219,6 @@ public class MerchantAction extends BaseAction {
             out.print(json); 
             out.flush(); 
         } catch (IOException e) { 
-            // TODO Auto-generated catch block 
             e.printStackTrace(); 
         }
         logger.info("MerchantAction.getOrderDetail end");
