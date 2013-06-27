@@ -67,7 +67,7 @@
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
 					<td class="orderTbBorder">
-						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+						<a class="orderDetailBtn thickbox" name="123" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
 					</td>
 				</tr>
 				<tr class="orderInfo">
@@ -105,7 +105,7 @@
 		});
 		
 	 	$(".orderDetailBtn").click(function(){  
-	 		
+	 		alert($(".orderDetailBtn").attr("name"));
 	        var jsonTest = {  
 	            roleId:1234,
 	            beginYear:'bYear',  
@@ -118,8 +118,13 @@
 	            url: "${ctx}/merchantAction.do?method=getOrderDetail",  
 	            data:jsonTest,  
 	            dataType:"json",  
-	            success:function(message) {  
-                	$("#orderDetailBox").html(message);  
+	            success:function(data) {  
+                	alert("成功"); 
+                	 $.each(data,function(i){  
+                                        /* $.each(data[i],function(key,value){  
+                                            alert(key+" "+value);  
+                                        })   */
+                                    });  
                 }
 	        });  
     	});  
