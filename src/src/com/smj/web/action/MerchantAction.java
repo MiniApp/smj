@@ -1,9 +1,12 @@
 package com.smj.web.action;
 
-import java.util.Enumeration;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import net.sf.json.JSONObject;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -11,6 +14,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.smj.orm.UserAddress;
 import com.smj.web.form.RegisterForm;
 
 /**
@@ -202,12 +206,25 @@ public class MerchantAction extends BaseAction {
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		logger.info("MerchantAction.getOrderDetail start");
-		
-		ActionForward forward = mapping.findForward("getOrderDetail");
-		RegisterForm rg = (RegisterForm) form;
-		rg.setCityname("成都成华区3322");
-		request.setAttribute("test2", rg);
-		logger.info("MerchantAction.getOrderDetail end");
-		return null;
+
+		RegisterForm testForm = (RegisterForm) form;// TODO Auto-generated method stub  
+        response.setContentType("text/json; charset=utf-8"); //注意设置为json，如果为xml，则设为xml  
+          
+        UserAddress user1 = new UserAddress();  
+        user1.setCustId(1);
+        user1.setUserAdd("chengdu1");
+        JSONObject json=JSONObject.fromObject(user1); 
+        try { 
+            PrintWriter out=response.getWriter(); 
+            System.out.println(json); 
+            out.print(json); 
+            out.flush(); 
+        } catch (IOException e) { 
+            // TODO Auto-generated catch block 
+            e.printStackTrace(); 
+        }
+        logger.info("MerchantAction.getOrderDetail end");
+        
+        return null;
 	}
 }
