@@ -27,15 +27,17 @@
 			<forward name="register" path="/user/register.jsp" />
 		</action>
 		<action
-			parameter="method" path="/merchantAction" scope="request"
+			parameter="method" path="/merchantAction" scope="request" name="registerForm"
 			type="com.smj.web.action.MerchantAction">
 			<forward name="addStore" path="/merchant/addStore.jsp" />
 			<forward name="getStoreInfo" path="/merchant/storeInfo.jsp" />
 			<forward name="productManager" path="/merchant/productManager.jsp" />
 			<forward name="addProduct" path="/merchant/addProduct.jsp" />
 			<forward name="updateProduct" path="/merchant/updateProduct.jsp" />
-			<forward redirect="true" name="deleteProduct" path="/merchantAction.do?method=productManager"></forward>
+			<forward name="deleteProduct" redirect="true" path="/merchantAction.do?method=productManager" />
 			<forward name="orderManager" path="/merchant/orderManager.jsp" />
+			<forward name="orderSearch" path="/merchant/orderManager.jsp" />
+			<forward name="getOrderDetail" path="/merchant/orderManager.jsp" />
 		</action>
 	</action-mappings>
 

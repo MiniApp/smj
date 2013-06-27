@@ -1,5 +1,7 @@
 package com.smj.web.action;
 
+import java.util.Enumeration;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -8,6 +10,8 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+
+import com.smj.web.form.RegisterForm;
 
 /**
  * 商户MerchantAction
@@ -20,7 +24,9 @@ import org.apache.struts.action.ActionMapping;
  * <li>商品添加-addProduct</li>
  * <li>商品修改-updateProduct</li>
  * <li>商品删除-deleteProduct</li>
- * <li>订单查询-orderManager</li>
+ * <li>订单管理-orderManager</li>
+ * <li>订单查询-orderSearch</li>
+ * <li>订单详细信息-getOrderDetail</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -151,7 +157,7 @@ public class MerchantAction extends BaseAction {
 	}
 	
 	/**
-	 * 订单查询
+	 * 订单管理
 	 * 
 	 * @author 苏皓
 	 * @since 2013-06-26
@@ -159,9 +165,49 @@ public class MerchantAction extends BaseAction {
 	public ActionForward orderManager(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
-		logger.debug("MerchantAction.orderManager start");
+		logger.info("MerchantAction.orderManager start");
 		ActionForward forward = mapping.findForward("orderManager");
-		logger.debug("MerchantAction.orderManager end");
+		RegisterForm rg = (RegisterForm) form;
+		rg.setCityname("成都锦江区");
+		request.setAttribute("test", rg);
+		logger.info("MerchantAction.orderManager end");
+		return forward;
+	}
+	
+	/**
+	 * 订单查询
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-27
+	 */
+	public ActionForward orderSearch(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.debug("MerchantAction.orderSearch start");
+		ActionForward forward = mapping.findForward("orderSearch");
+		RegisterForm rg = (RegisterForm) form;
+		rg.setCityname("成都成华区");
+		request.setAttribute("test", rg);
+		logger.debug("MerchantAction.orderSearch end");
+		return forward;
+	}
+	
+	/**
+	 * 订单详细信息
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-27
+	 */
+	public ActionForward getOrderDetail(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.getOrderDetail start");
+		
+		ActionForward forward = mapping.findForward("getOrderDetail");
+		RegisterForm rg = (RegisterForm) form;
+		rg.setCityname("成都成华区3322");
+		request.setAttribute("test2", rg);
+		logger.info("MerchantAction.getOrderDetail end");
 		return forward;
 	}
 }

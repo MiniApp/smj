@@ -62,14 +62,18 @@
 
 /*--订单管理Start--*/
 .orderSearch{width:780px;height:50px;line-height:50px;padding-left:5px;background:url(../images/nav-sort.gif);background-position:0 0;background-repeat:repeat-x;margin:0;-moz-border-radius:5px;-webkit-border-radius:5px;khtml-border-radius: 5px;border-radius: 5px;}
-.searchTime, .searchCusOrOrderNum, .searchSubmitBtn, .searchSubmitBtnIn{float:left;margin-right:5px;}
+.searchTime, .searchCusOrOrderNum, .searchSubmitBtn, .searchSubmitBtnIn{float:left;margin-right:2px;}
+.searchTime input, .searchCusOrOrderNum input{width:160px; height:20px;}
 .searchTime span, .searchCusOrOrderNum span, .searchSubmitBtn{color:#FFF;}
-.searchSubmitBtnIn { height: 20px; margin:15px auto; border: none; background: #FF8901; color: #FFF; line-height: 18px; text-align:center; letter-spacing: 1px; cursor: pointer; }
+.searchSubmitBtn{width:50px;height:50px;line-height:50px;}
+.searchSubmitBtnIn {margin:0;padding:0;width:50px; height: 24px; margin:12px 0; border: none; background: #FF8901; color: #FFF; line-height: 18px; text-align:center; letter-spacing: 1px; cursor: pointer;-moz-border-radius:5px;-webkit-border-radius:5px;khtml-border-radius: 5px;border-radius: 5px; }
 .orderList{clear:both;width:100%;margin-top:10px;}
-.orderList table{border-collapse:collapse;width:100%; border:1px solid #F60;}
-.orderTd{width:18%; height:30px;text-align:center;border:1px solid #F60;}
-.orderTdAct{width:10%;height:30px;border:1px solid #F60;}
-.orderTbBorder{border:1px dashed #F60;height:20px;}
+.orderList table{border-collapse:collapse;width:785px; border:1px solid #F60;}
+.orderTd{width:18%; height:30px;text-align:center;border:1px solid #F60;font-weight:bold;}
+.orderTdAct{width:10%;height:30px; text-align:center;border:1px solid #F60;font-weight:bold;}
+.orderTbBorder{border:1px dashed #F60;height:25px;text-align:center;}
+.orderDetailBtn{display:block;width:50px; height:20px;margin:0 auto;background-color:#999;color:#FFF;-moz-border-radius:5px;-webkit-border-radius:5px;khtml-border-radius: 5px;border-radius: 5px;}
+.hightLight{background-color:#CCC;}
 /*--订单管理end--*/
 
 /*--底部公共区域Start--*/

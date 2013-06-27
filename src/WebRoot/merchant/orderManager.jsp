@@ -9,6 +9,9 @@
 	<meta name="Keywords" content="sunbyway,天津快餐,天津外卖,天津订餐,天津送餐,天津美食,天津小吃,外卖网,送餐网,快餐,盒饭,网上订餐,天津24小时外卖,外卖电话,盒饭配送,快餐外卖,快餐送餐,尚佰味网,尚佰味" />
 	<link rel="shortcut icon" href="${ctx}/favicon.ico">
 	<script type="text/javascript" src="${ctx}/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="${ctx}/js/WdatePicker.js"></script>
+	<script type="text/javascript" src="${ctx}/js/thickbox-compressed.js" ></script>
+	<link href="${ctx}/css/thickbox.css" media="screen" rel="stylesheet" type="text/css" />
 	<link href="${ctx}/css/global.css" rel="stylesheet" type="text/css" />
 	<link href="${ctx}/css/merchant.css" rel="stylesheet" type="text/css" />
 </head>
@@ -21,8 +24,8 @@
    		<h2 class="title"><img src="${ctx}/images/space.gif" class="icon7"/>订单管理</h2>
    		<div class="orderSearch">
    			<form action="${ctx}/merchantAction.do?method=orderSearch" method="post">
-   				<div class="searchTime"><span>开始日期：</span><input type="text" /></div>
-   				<div class="searchTime"><span>结束日期：</span><input type="text" /></div>
+   				<div class="searchTime"><span>开始日期：</span><input type="text" class="Wdate" onClick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})" /></div>
+   				<div class="searchTime"><span>结束日期：</span><input type="text" class="Wdate" onClick="WdatePicker({startDate:'%y-%M-01 00:00:00',dateFmt:'yyyy-MM-dd HH:mm:ss',alwaysUseStartDate:true})" /></div>
    				<div class="searchCusOrOrderNum"><span>顾客姓名/订单号：</span><input type="text" /></div>
    				<div class="searchSubmitBtn"><input class="searchSubmitBtnIn" type="submit" value=" 查 询  "/></div>
    			</form>
@@ -37,45 +40,54 @@
 					<td class="orderTd">交易日期</td>
 					<td class="orderTdAct">操作</td>
 				</tr>
-				<tr>
+				<tr class="orderInfo">
 					<td class="orderTbBorder">12324</td>
 					<td class="orderTbBorder">张三</td>
-					<td class="orderTbBorder">成华区</td>
+					<td class="orderTbBorder">${test.cityname }</td>
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
-					<td class="orderTbBorder"><a href="${ctx}/merchantAction.do?method=getOrderDetail&orderId=1">详细</a></td>
+					<td class="orderTbBorder">
+						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+					</td>
 				</tr>
-				<tr>
+				<tr class="orderInfo">
 					<td class="orderTbBorder">12324</td>
 					<td class="orderTbBorder">张三</td>
-					<td class="orderTbBorder">成华区</td>
+					<td class="orderTbBorder">${test.cityname }</td>
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
-					<td class="orderTbBorder"><a href="${ctx}/merchantAction.do?method=getOrderDetail&orderId=1">详细</a></td>
+					<td class="orderTbBorder">
+						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+					</td>
 				</tr>
-				<tr>
+				<tr class="orderInfo">
 					<td class="orderTbBorder">12324</td>
 					<td class="orderTbBorder">张三</td>
-					<td class="orderTbBorder">成华区</td>
+					<td class="orderTbBorder">${test.cityname }</td>
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
-					<td class="orderTbBorder"><a href="${ctx}/merchantAction.do?method=getOrderDetail&orderId=1">详细</a></td>
+					<td class="orderTbBorder">
+						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+					</td>
 				</tr>
-				<tr>
+				<tr class="orderInfo">
 					<td class="orderTbBorder">12324</td>
 					<td class="orderTbBorder">张三</td>
-					<td class="orderTbBorder">成华区</td>
+					<td class="orderTbBorder">${test.cityname }</td>
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
-					<td class="orderTbBorder"><a href="${ctx}/merchantAction.do?method=getOrderDetail&orderId=1">详细</a></td>
+					<td class="orderTbBorder">
+						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+					</td>
 				</tr>
+				<tr><td colspan="6" algin="right">${sugu:htmlPages(p_no,p_num)}</td></tr>
+			</table>
+		</div>
+		<div id="orderDetailBox" style="display:none;">
+			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
-					<td class="orderTbBorder">12324</td>
-					<td class="orderTbBorder">张三</td>
-					<td class="orderTbBorder">成华区</td>
-					<td class="orderTbBorder">110</td>
-					<td class="orderTbBorder">2013-06-26</td>
-					<td class="orderTbBorder"><a href="${ctx}/merchantAction.do?method=getOrderDetail&orderId=1">详细</a></td>
+					<td>送货地址</td>
+					<td>${test2.cityname }</td>
 				</tr>
 			</table>
 		</div>
@@ -84,5 +96,35 @@
 </td></tr></table>
 <%@include file="footer.jsp" %>
 </body>
-
+<script type="text/javascript">
+	 $(document).ready(function(){
+	 	$(".orderInfo").mouseover(function(){
+			$(this).addClass("hightLight");
+		}).mouseout(function(){
+			$(this).removeClass("hightLight");
+		});
+		
+	 	$(".orderDetailBtn").click(function(){  
+	 		
+	        var jsonTest = {  
+	            roleId:1234,
+	            beginYear:'bYear',  
+	            beginWeek:'bWeek',  
+	            endYear:'eYear',  
+	            endWeek:'eWeek'
+        	};  
+	        //alert(JSON.stringify(jsonTest));  
+	        $.ajax({  
+	            type: "POST",  
+	            url: "${ctx}/merchantAction.do?method=getOrderDetail",  
+	            data:jsonTest,  
+	            dataType:"json",  
+	            success:function(){  
+	                alert(1);  
+	            }  
+	        });  
+    	});  
+	});
+	
+</script>
 </html>
