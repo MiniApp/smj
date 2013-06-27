@@ -47,7 +47,7 @@
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
 					<td class="orderTbBorder">
-						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+						<a class="orderDetailBtn thickbox" name="name1" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
 					</td>
 				</tr>
 				<tr class="orderInfo">
@@ -57,7 +57,7 @@
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
 					<td class="orderTbBorder">
-						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+						<a class="orderDetailBtn thickbox" name="name2" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
 					</td>
 				</tr>
 				<tr class="orderInfo">
@@ -77,17 +77,19 @@
 					<td class="orderTbBorder">110</td>
 					<td class="orderTbBorder">2013-06-26</td>
 					<td class="orderTbBorder">
-						<a class="orderDetailBtn thickbox" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
+						<a class="orderDetailBtn thickbox" name="name12" type="button" title="订单详细信息" href="#TB_inline?height=400&width=600&inlineId=orderDetailBox">详&nbsp;&nbsp;细</a>
 					</td>
 				</tr>
-				<tr><td colspan="6" algin="right">${sugu:htmlPages(p_no,p_num)}</td></tr>
+				<tr><td colspan="6">${sugu:htmlPages(p_no,p_num)}</td></tr>
 			</table>
 		</div>
 		<div id="orderDetailBox" style="display:none;">
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
 					<td>送货地址</td>
-					<td>${test2.cityname }</td>
+					<td>
+						<input class="addr"/>
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -104,14 +106,9 @@
 			$(this).removeClass("hightLight");
 		});
 		
-	 	$(".orderDetailBtn").click(function(){  
-	 		alert($(".orderDetailBtn").attr("name"));
+	 	$(".orderDetailBtn").click(function(){
 	        var jsonTest = {  
-	            roleId:1234,
-	            beginYear:'bYear',  
-	            beginWeek:'bWeek',  
-	            endYear:'eYear',  
-	            endWeek:'eWeek'
+	            orderId:1234
         	};  
 	        $.ajax({  
 	            type: "POST",  
@@ -119,12 +116,7 @@
 	            data:jsonTest,  
 	            dataType:"json",  
 	            success:function(data) {  
-                	alert("成功"); 
-                	 $.each(data,function(i){  
-                                        /* $.each(data[i],function(key,value){  
-                                            alert(key+" "+value);  
-                                        })   */
-                                    });  
+                	 $(".addr").val(""+data.userAdd+"");
                 }
 	        });  
     	});  
