@@ -208,6 +208,6 @@ public class MerchantAction extends BaseAction {
 		rg.setCityname("成都成华区3322");
 		request.setAttribute("test2", rg);
 		logger.info("MerchantAction.getOrderDetail end");
-		return forward;
+		return null;
 	}
 }

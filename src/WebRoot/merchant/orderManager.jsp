@@ -113,15 +113,14 @@
 	            endYear:'eYear',  
 	            endWeek:'eWeek'
         	};  
-	        //alert(JSON.stringify(jsonTest));  
 	        $.ajax({  
 	            type: "POST",  
 	            url: "${ctx}/merchantAction.do?method=getOrderDetail",  
 	            data:jsonTest,  
 	            dataType:"json",  
-	            success:function(){  
-	                alert(1);  
-	            }  
+	            success:function(message) {  
+                	$("#orderDetailBox").html(message);  
+                }
 	        });  
     	});  
 	});
