@@ -207,7 +207,6 @@ public class MerchantAction extends BaseAction {
 			HttpServletResponse response) throws Exception {
 		logger.info("MerchantAction.getOrderDetail start");
 
-		RegisterForm testForm = (RegisterForm) form;// TODO Auto-generated method stub  
         response.setContentType("text/json; charset=utf-8"); //注意设置为json，如果为xml，则设为xml  
           
         UserAddress user1 = new UserAddress();  
