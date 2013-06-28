@@ -38,6 +38,8 @@ import com.smj.web.form.RegisterForm;
  * <li>留言管理-leaveWordManager</li>
  * <li>查询密码-getPassword</li>
  * <li>修改密码-updatePassword</li>
+ * <li>公告管理-getAnnounceList</li>
+ * <li>发布管理-addAnnounce</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -356,6 +358,47 @@ public class MerchantAction extends BaseAction {
 		ActionForward forward = mapping.findForward("updatePassword");
 		
 		logger.info("MerchantAction.updatePassword end");
+		return forward;
+	}
+	
+	/**
+	 * 公告管理
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward getAnnounceList(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.getAnnounceList start");
+		ActionForward forward = mapping.findForward("getAnnounceList");
+		
+		logger.info("MerchantAction.getAnnounceList end");
+		return forward;
+	}
+	
+	/**
+	 * 发布公告
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward addAnnounce(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.addAnnounce start");
+		ActionForward forward = null;
+		String action = request.getParameter("action");
+		if ("save".equals(action)) {
+			forward = mapping.findForward("save");
+			response.setContentType("text/html; charset=utf-8");
+			return showMessage(request, response, "公告发布成功！",
+					"/merchantAction.do?method=getAnnounceList");
+		} else if ("show".equals(action)) {
+			forward = mapping.findForward("show");
+		}
+		
+		logger.info("MerchantAction.addAnnounce end");
 		return forward;
 	}
 }

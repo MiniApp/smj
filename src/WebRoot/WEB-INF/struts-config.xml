@@ -43,6 +43,9 @@
 			<forward name="leaveWordManager" path="/merchant/leaveWordManager.jsp" />
 			<forward name="getPassword" path="/merchant/updatePwd.jsp" />
 			<forward name="updatePassword" path="/merchant/updatePwd.jsp" />
+			<forward name="getAnnounceList" path="/merchant/announceList.jsp" />
+			<forward name="show" path="/merchant/addAnnounce.jsp" />
+			<forward name="save" path="/merchant/announceList.jsp" />
 		</action>
 	</action-mappings>
 
