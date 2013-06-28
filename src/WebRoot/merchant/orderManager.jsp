@@ -84,11 +84,78 @@
 			</table>
 		</div>
 		<div id="orderDetailBox" style="display:none;">
+			<table border="0" cellspacing="0" cellpadding="0" class="orderDetailTable">
+				<tr>
+					<td>订单号：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+					<td>交易日期：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>顾客姓名：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+					<td>联系电话：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>总金额：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+					<td>积分：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>是否开发票：</td>
+					<td>
+						<input type="checkbox" class="addr" readonly="readonly"/>
+					</td>
+					<td>订单状态：</td>
+					<td>
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>送货地址：</td>
+					<td colspan="3">
+						<input type="text" class="addr" readonly="readonly"/>
+					</td>
+				</tr>
+				<tr>
+					<td>商品名称</td>
+					<td>商品单价</td>
+					<td>购买数量</td>
+					<td>金额</td>
+				</tr>
+				<tr>
+					<td>牙刷</td>
+					<td>12.5</td>
+					<td>2</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>牙膏</td>
+					<td>20.5</td>
+					<td>1</td>
+					<td>20.5</td>
+				</tr>
+			</table>
 			<table border="0" cellspacing="0" cellpadding="0">
 				<tr>
-					<td>送货地址</td>
-					<td>
-						<input class="addr"/>
+					<td style="width:300px; height:40px;">总金额：40.5</td>
+					<td style="width:300px;height:40px;">
+						<a class="orderVerify" style="color:#FFF;" href="#">审核</a>
+						<input type="hidden" class="hiddenOrderId" name="hiddenOrderId" />
 					</td>
 				</tr>
 			</table>
@@ -109,7 +176,8 @@
 	 	$(".orderDetailBtn").click(function(){
 	        var jsonTest = {  
 	            orderId:$(this).attr("name")
-        	};  
+        	}; 
+        	$(".hiddenOrderId").val($(this).attr("name")); 
 	        $.ajax({  
 	            type: "POST",  
 	            url: "${ctx}/merchantAction.do?method=getOrderDetail",  
@@ -117,6 +185,20 @@
 	            dataType:"json",  
 	            success:function(data) {  
                 	 $(".addr").val(""+data.userAdd+"");
+                }
+	        });  
+    	}); 
+    	$(".orderVerify").click(function(){
+	        var jsonTest = {  
+	            orderId:$(".hiddenOrderId").val()
+        	};  
+	        $.ajax({  
+	            type: "POST",  
+	            url: "${ctx}/merchantAction.do?method=orderVerify",  
+	            data:jsonTest,  
+	            dataType:"json",  
+	            success:function(data) {  
+                	 alert("订单审核成功！");
                 }
 	        });  
     	});  

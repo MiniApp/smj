@@ -31,6 +31,7 @@ import com.smj.web.form.RegisterForm;
  * <li>订单管理-orderManager</li>
  * <li>订单查询-orderSearch</li>
  * <li>订单详细信息-getOrderDetail</li>
+ * <li>订单核审-orderVerify</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -222,6 +223,36 @@ public class MerchantAction extends BaseAction {
             e.printStackTrace(); 
         }
         logger.info("MerchantAction.getOrderDetail end");
+        
+        return null;
+	}
+	
+	/**
+	 * 订单核审
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward orderVerify(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.orderVerify start");
+
+        response.setContentType("text/json; charset=utf-8"); //注意设置为json，如果为xml，则设为xml  
+          
+        UserAddress user1 = new UserAddress();  
+        user1.setCustId(1);
+        user1.setUserAdd("chengdu1");
+        JSONObject json=JSONObject.fromObject(user1); 
+        try { 
+            PrintWriter out=response.getWriter(); 
+            System.out.println(json); 
+            out.print(json); 
+            out.flush(); 
+        } catch (IOException e) { 
+            e.printStackTrace(); 
+        }
+        logger.info("MerchantAction.orderVerify end");
         
         return null;
 	}
