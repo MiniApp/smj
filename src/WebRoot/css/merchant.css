@@ -80,7 +80,7 @@
 .orderDetailTable td input[type="checkbox"]{margin-left:5px;}
 .orderVerify{display:block; clear:both;float:right; text-align:center; width:60px; height:30px;line-height:30px; background-color:#F60; color:#FFF; font-weight:bold; font-size:16px;-moz-border-radius:5px;-webkit-border-radius:5px;khtml-border-radius: 5px;border-radius: 5px;}
 /*--订单管理end--*/
-
+  
 /*--用户评价管理Start--*/
 .userAppList{clear:both;width:100%;margin-top:10px;}
 .userAppList table{border-collapse:collapse;width:785px; border:1px solid #F60;}
