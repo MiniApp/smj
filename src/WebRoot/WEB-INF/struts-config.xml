@@ -39,6 +39,10 @@
 			<forward name="orderSearch" path="/merchant/orderManager.jsp" />
 			<forward name="getOrderDetail" path="/merchant/orderManager.jsp" />
 			<forward name="userAppManager" path="/merchant/userAppManager.jsp" />
+			<forward name="getMerchantInfo" path="/merchant/merchantInfo.jsp" />
+			<forward name="leaveWordManager" path="/merchant/leaveWordManager.jsp" />
+			<forward name="getPassword" path="/merchant/updatePwd.jsp" />
+			<forward name="updatePassword" path="/merchant/updatePwd.jsp" />
 		</action>
 	</action-mappings>
 

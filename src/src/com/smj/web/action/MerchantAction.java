@@ -33,6 +33,11 @@ import com.smj.web.form.RegisterForm;
  * <li>订单详细信息-getOrderDetail</li>
  * <li>订单核审-orderVerify</li>
  * <li>用户评价管理-userAppManager</li>
+ * <li>商户信息-getMerchantInfo</li>
+ * <li>商户信息修改-updateMerchantInfo</li>
+ * <li>留言管理-leaveWordManager</li>
+ * <li>查询密码-getPassword</li>
+ * <li>修改密码-updatePassword</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -262,7 +267,7 @@ public class MerchantAction extends BaseAction {
 	 * 用户评价管理
 	 * 
 	 * @author 苏皓
-	 * @since 2013-06-26
+	 * @since 2013-06-28
 	 */
 	public ActionForward userAppManager(ActionMapping mapping,
 			ActionForm form, HttpServletRequest request,
@@ -271,6 +276,86 @@ public class MerchantAction extends BaseAction {
 		ActionForward forward = mapping.findForward("userAppManager");
 		
 		logger.info("MerchantAction.userAppManager end");
+		return forward;
+	}
+	
+	/**
+	 * 商户信息
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward getMerchantInfo(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.getMerchantInfo start");
+		ActionForward forward = mapping.findForward("getMerchantInfo");
+		
+		logger.info("MerchantAction.getMerchantInfo end");
+		return forward;
+	}
+	
+	/**
+	 * 商户信息
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward updateMerchantInfo(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.updateMerchantInfo start");
+		ActionForward forward = mapping.findForward("getMerchantInfo");
+		
+		logger.info("MerchantAction.updateMerchantInfo end");
+		return forward;
+	}
+	
+	/**
+	 * 留言管理
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward leaveWordManager(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.leaveWordManager start");
+		ActionForward forward = mapping.findForward("leaveWordManager");
+		
+		logger.info("MerchantAction.leaveWordManager end");
+		return forward;
+	}
+	
+	/**
+	 * 查询密码
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward getPassword(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.getPassword start");
+		ActionForward forward = mapping.findForward("getPassword");
+		
+		logger.info("MerchantAction.getPassword end");
+		return forward;
+	}
+	
+	/**
+	 * 修改密码
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-28
+	 */
+	public ActionForward updatePassword(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.updatePassword start");
+		ActionForward forward = mapping.findForward("updatePassword");
+		
+		logger.info("MerchantAction.updatePassword end");
 		return forward;
 	}
 }
