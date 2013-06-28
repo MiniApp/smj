@@ -81,6 +81,13 @@
 .orderVerify{display:block; clear:both;float:right; text-align:center; width:60px; height:30px;line-height:30px; background-color:#F60; color:#FFF; font-weight:bold; font-size:16px;-moz-border-radius:5px;-webkit-border-radius:5px;khtml-border-radius: 5px;border-radius: 5px;}
 /*--订单管理end--*/
 
+/*--用户评价管理Start--*/
+.userAppList{clear:both;width:100%;margin-top:10px;}
+.userAppList table{border-collapse:collapse;width:785px; border:1px solid #F60;}
+.userAppTd{width:18%; height:30px;text-align:center;border:1px solid #F60;font-weight:bold;}
+.userAppTbBorder{border:1px dashed #F60;height:25px;text-align:center;}
+/*--用户评价管理End--*/
+
 /*--底部公共区域Start--*/
 .footerAbout {margin:10px auto; display:inline-table; width:920px; padding:10px 0; text-align:center;background:url(../images/hd-sp.gif) repeat-x 0 -929px;}
 .subfooter{width:920px; height:120px;padding:20px 0 10px 60px;}

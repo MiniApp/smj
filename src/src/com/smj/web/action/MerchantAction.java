@@ -32,6 +32,7 @@ import com.smj.web.form.RegisterForm;
  * <li>订单查询-orderSearch</li>
  * <li>订单详细信息-getOrderDetail</li>
  * <li>订单核审-orderVerify</li>
+ * <li>用户评价管理-userAppManager</li>
  * 
  * @author 苏皓
  * @since 2013-06-25
@@ -255,5 +256,21 @@ public class MerchantAction extends BaseAction {
         logger.info("MerchantAction.orderVerify end");
         
         return null;
+	}
+	
+	/**
+	 * 用户评价管理
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-26
+	 */
+	public ActionForward userAppManager(ActionMapping mapping,
+			ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
+		logger.info("MerchantAction.userAppManager start");
+		ActionForward forward = mapping.findForward("userAppManager");
+		
+		logger.info("MerchantAction.userAppManager end");
+		return forward;
 	}
 }

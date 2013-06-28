@@ -38,6 +38,7 @@
 			<forward name="orderManager" path="/merchant/orderManager.jsp" />
 			<forward name="orderSearch" path="/merchant/orderManager.jsp" />
 			<forward name="getOrderDetail" path="/merchant/orderManager.jsp" />
+			<forward name="userAppManager" path="/merchant/userAppManager.jsp" />
 		</action>
 	</action-mappings>
 
