@@ -128,7 +128,7 @@
 				<tr>
 					<td>送货地址：</td>
 					<td colspan="3">
-						<input type="text" class="addr" readonly="readonly"/>
+						<input type="text" class="addr" style="width:455px;"  readonly="readonly"/>
 					</td>
 				</tr>
 				<tr>
