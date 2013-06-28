@@ -108,8 +108,9 @@
 		
 	 	$(".orderDetailBtn").click(function(){
 	        var jsonTest = {  
-	            orderId:1234
+	            orderId:$(this).attr("name")
         	};  
+        	alert($(this).attr("name"));
 	        $.ajax({  
 	            type: "POST",  
 	            url: "${ctx}/merchantAction.do?method=getOrderDetail",  
