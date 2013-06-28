@@ -110,7 +110,6 @@
 	        var jsonTest = {  
 	            orderId:$(this).attr("name")
         	};  
-        	alert($(this).attr("name"));
 	        $.ajax({  
 	            type: "POST",  
 	            url: "${ctx}/merchantAction.do?method=getOrderDetail",  
