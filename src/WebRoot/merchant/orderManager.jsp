@@ -198,7 +198,7 @@
 	            data:jsonTest,  
 	            dataType:"json",  
 	            success:function(data) {  
-                	 alert("订单审核成功！");
+                	alert("订单审核成功！");
                 }
 	        });  
     	});  
