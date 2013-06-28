@@ -8,7 +8,7 @@
     <class name="com.smj.orm.EnterInfo" table="enter_info" catalog="onlinesupermarket">
         <id name="enterId" type="java.lang.Integer">
             <column name="enter_id" />
-            <generator class="native" />
+            <generator class="increment" />
         </id>
         <property name="enterName" type="java.lang.String">
             <column name="enter_name" length="80" />

@@ -12,8 +12,8 @@
            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
 	 
 
-	
-	
+	<!-- 开启注解 -->
+	<context:annotation-config/>
 	<!--  -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
  
@@ -44,6 +44,7 @@
 					<value>com/smj/orm/UserAddress.hbm.xml</value> 
 					<value>com/smj/orm/UserSession.hbm.xml</value> 
 					<value>com/smj/orm/Region.hbm.xml</value> 
+				
 			    </list> 
 		</property>
 		
@@ -110,23 +111,23 @@
 	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
 		<property name="sessionFactory" ref="sessionFactory"/>
 	</bean>
-	
-	<bean id="userDao" class="com.smj.dao.impl.UserDaoImpl">
+	<!-- 公共基础数据库访问对象 -->
+	<bean id="dao" class="com.smj.dao.impl.IBaseDaoImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
-	
-	<bean name="/userAction" class="com.smj.web.action.UserAction">   
- 	    <property name="userDao" ref="userDao"></property>   
- 	     <property name="regionDao" ref="regionDao"></property>   
-  	</bean>   
-  	<bean name="/merchantAction" class="com.smj.web.action.MerchantAction">   
-  	</bean>  
-    
-      <bean id="regionDao" class="com.smj.dao.impl.RegionDaoImpl">
+	<bean name="/merchantAction" class="com.smj.web.action.MerchantAction">   
+  	</bean>
+  	<bean id="userDao" class="com.smj.dao.impl.UserDaoImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
-    
-       <bean id="addressDao" class="com.smj.dao.impl.UserAddressDaoImpl">
+  	<bean name="/userAction" class="com.smj.web.action.UserAction">
+  		<property name="userDao" ref="userDao"></property>
+  		<!-- <property name="regionDao" ref="regionDao"></property> -->
+  	</bean> 
+  	 <!-- <bean id="regionDao" class="com.smj.dao.impl.RegionDaoImpl">
+		<property name="hibernateTemplate" ref="hibernateTemplate"/>
+	</bean>  
+	<bean id="addressDao" class="com.smj.dao.impl.UserAddressDaoImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
     
@@ -134,13 +135,9 @@
  	    <property name="userDao" ref="userDao"></property>   
  	    <property name="regionDao" ref="regionDao"></property>   
  	     <property name="addressDao" ref="addressDao"></property>   
- 	</bean>  
+ 	</bean>   -->
     
     <bean id="userService" class="com.smj.service.impl.UserServiceImpl">
 		<property name="hibernateTemplate" ref="hibernateTemplate"/>
 	</bean>
-	
-	
-	
-	
 </beans>

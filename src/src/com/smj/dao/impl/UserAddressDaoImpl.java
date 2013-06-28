@@ -12,31 +12,14 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import com.smj.dao.IUserAddressDao;
 import com.smj.orm.UserAddress;
 
-/**
- * A data access object (DAO) providing persistence and search support for
- * UserAddress entities. Transaction control of the save(), update() and
- * delete() operations can directly support Spring container-managed
- * transactions or they can be augmented to handle user-managed Spring
- * transactions. Each of these methods provides additional information for how
- * to configure it for the desired type of transaction control.
- * 
- * @see com.smj.orm.UserAddress
- * @author MyEclipse Persistence Tools
- */
-
-public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddressDao{
+ 
+public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddressDao {
 	private static final Log log = LogFactory.getLog(UserAddressDaoImpl.class);
-	// property constants
-	public static final String USER_ID = "userId";
-	public static final String ADDRESS1 = "address1";
-	public static final String ADDRESS2 = "address2";
-	public static final String ADDRESS3 = "address3";
-	public static final String ISDEFAULT = "isdefault";
 
 	public void save(UserAddress transientInstance) {
 		log.debug("saving UserAddress instance");
 		try {
-			getSession().save(transientInstance);
+			getHibernateTemplate().save(transientInstance);
 			log.debug("save successful");
 		} catch (RuntimeException re) {
 			log.error("save failed", re);
@@ -47,7 +30,7 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 	public void delete(UserAddress persistentInstance) {
 		log.debug("deleting UserAddress instance");
 		try {
-			getSession().delete(persistentInstance);
+			getHibernateTemplate().delete(persistentInstance);
 			log.debug("delete successful");
 		} catch (RuntimeException re) {
 			log.error("delete failed", re);
@@ -58,7 +41,7 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 	public UserAddress findById(java.lang.Integer id) {
 		log.debug("getting UserAddress instance with id: " + id);
 		try {
-			UserAddress instance = (UserAddress) getSession().get(
+			UserAddress instance = (UserAddress) getHibernateTemplate().get(
 					"com.smj.orm.UserAddress", id);
 			return instance;
 		} catch (RuntimeException re) {
@@ -67,20 +50,7 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 		}
 	}
 
-	public List findByExample(UserAddress instance) {
-		log.debug("finding UserAddress instance by example");
-		try {
-			List results = getSession()
-					.createCriteria("com.smj.orm.UserAddress")
-					.add(Example.create(instance)).list();
-			log.debug("find by example successful, result size: "
-					+ results.size());
-			return results;
-		} catch (RuntimeException re) {
-			log.error("find by example failed", re);
-			throw re;
-		}
-	}
+
 
 	public List findByProperty(String propertyName, Object value) {
 		log.debug("finding UserAddress instance with property: " + propertyName
@@ -88,41 +58,20 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 		try {
 			String queryString = "from UserAddress as model where model."
 					+ propertyName + "= ?";
-			Query queryObject = getSession().createQuery(queryString);
-			queryObject.setParameter(0, value);
-			return queryObject.list();
+			List list = getHibernateTemplate().find(queryString,value);
+			return list;
 		} catch (RuntimeException re) {
 			log.error("find by property name failed", re);
 			throw re;
 		}
 	}
 
-	public List findByUserId(Object userId) {
-		return findByProperty(USER_ID, userId);
-	}
-
-	public List findByAddress1(Object address1) {
-		return findByProperty(ADDRESS1, address1);
-	}
-
-	public List findByAddress2(Object address2) {
-		return findByProperty(ADDRESS2, address2);
-	}
-
-	public List findByAddress3(Object address3) {
-		return findByProperty(ADDRESS3, address3);
-	}
-
-	public List findByIsdefault(Object isdefault) {
-		return findByProperty(ISDEFAULT, isdefault);
-	}
-
 	public List findAll() {
 		log.debug("finding all UserAddress instances");
 		try {
 			String queryString = "from UserAddress";
-			Query queryObject = getSession().createQuery(queryString);
-			return queryObject.list();
+			List list = getHibernateTemplate().find(queryString);
+			return list;
 		} catch (RuntimeException re) {
 			log.error("find all failed", re);
 			throw re;
@@ -132,7 +81,7 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 	public UserAddress merge(UserAddress detachedInstance) {
 		log.debug("merging UserAddress instance");
 		try {
-			UserAddress result = (UserAddress) getSession().merge(
+			UserAddress result = (UserAddress) getHibernateTemplate().merge(
 					detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -145,7 +94,7 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 	public void attachDirty(UserAddress instance) {
 		log.debug("attaching dirty UserAddress instance");
 		try {
-			getSession().saveOrUpdate(instance);
+			getHibernateTemplate().saveOrUpdate(instance);
 			log.debug("attach successful");
 		} catch (RuntimeException re) {
 			log.error("attach failed", re);
@@ -153,14 +102,5 @@ public class UserAddressDaoImpl extends HibernateDaoSupport implements IUserAddr
 		}
 	}
 
-	public void attachClean(UserAddress instance) {
-		log.debug("attaching clean UserAddress instance");
-		try {
-			getSession().lock(instance, LockMode.NONE);
-			log.debug("attach successful");
-		} catch (RuntimeException re) {
-			log.error("attach failed", re);
-			throw re;
-		}
-	}
+	 
 }

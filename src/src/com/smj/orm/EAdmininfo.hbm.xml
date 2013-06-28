@@ -8,7 +8,7 @@
     <class name="com.smj.orm.EAdmininfo" table="e_admininfo" catalog="onlinesupermarket">
         <id name="adminId" type="java.lang.Integer">
             <column name="admin_id" />
-            <generator class="native" />
+            <generator class="increment" />
         </id>
         <property name="storeId" type="java.lang.Integer">
             <column name="store_id" />

@@ -8,7 +8,7 @@
     <class name="com.smj.orm.UserAddress" table="user_address" catalog="onlinesupermarket">
         <id name="id" type="java.lang.Integer">
             <column name="id" />
-            <generator class="native" />
+            <generator class="increment" />
         </id>
         <property name="custId" type="java.lang.Integer">
             <column name="cust_id" />

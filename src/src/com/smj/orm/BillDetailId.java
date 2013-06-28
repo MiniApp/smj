@@ -1,75 +1,71 @@
 package com.smj.orm;
 
+ 
 
+public class BillDetailId implements java.io.Serializable {
 
-/**
- * BillDetailId entity. @author MyEclipse Persistence Tools
- */
+	// Fields
 
-public class BillDetailId  implements java.io.Serializable {
+	private Integer storeId;
+	private Integer billId;
 
+	// Constructors
 
-    // Fields    
+	/** default constructor */
+	public BillDetailId() {
+	}
 
-     private Integer storeId;
-     private Integer billId;
+	/** full constructor */
+	public BillDetailId(Integer storeId, Integer billId) {
+		this.storeId = storeId;
+		this.billId = billId;
+	}
 
+	// Property accessors
 
-    // Constructors
+	public Integer getStoreId() {
+		return this.storeId;
+	}
 
-    /** default constructor */
-    public BillDetailId() {
-    }
+	public void setStoreId(Integer storeId) {
+		this.storeId = storeId;
+	}
 
-    
-    /** full constructor */
-    public BillDetailId(Integer storeId, Integer billId) {
-        this.storeId = storeId;
-        this.billId = billId;
-    }
+	public Integer getBillId() {
+		return this.billId;
+	}
 
-   
-    // Property accessors
+	public void setBillId(Integer billId) {
+		this.billId = billId;
+	}
 
-    public Integer getStoreId() {
-        return this.storeId;
-    }
-    
-    public void setStoreId(Integer storeId) {
-        this.storeId = storeId;
-    }
+	public boolean equals(Object other) {
+		if ((this == other))
+			return true;
+		if ((other == null))
+			return false;
+		if (!(other instanceof BillDetailId))
+			return false;
+		BillDetailId castOther = (BillDetailId) other;
 
-    public Integer getBillId() {
-        return this.billId;
-    }
-    
-    public void setBillId(Integer billId) {
-        this.billId = billId;
-    }
-   
+		return ((this.getStoreId() == castOther.getStoreId()) || (this
+				.getStoreId() != null
+				&& castOther.getStoreId() != null && this.getStoreId().equals(
+				castOther.getStoreId())))
+				&& ((this.getBillId() == castOther.getBillId()) || (this
+						.getBillId() != null
+						&& castOther.getBillId() != null && this.getBillId()
+						.equals(castOther.getBillId())));
+	}
 
+	public int hashCode() {
+		int result = 17;
 
-
-   public boolean equals(Object other) {
-         if ( (this == other ) ) return true;
-		 if ( (other == null ) ) return false;
-		 if ( !(other instanceof BillDetailId) ) return false;
-		 BillDetailId castOther = ( BillDetailId ) other; 
-         
-		 return ( (this.getStoreId()==castOther.getStoreId()) || ( this.getStoreId()!=null && castOther.getStoreId()!=null && this.getStoreId().equals(castOther.getStoreId()) ) )
- && ( (this.getBillId()==castOther.getBillId()) || ( this.getBillId()!=null && castOther.getBillId()!=null && this.getBillId().equals(castOther.getBillId()) ) );
-   }
-   
-   public int hashCode() {
-         int result = 17;
-         
-         result = 37 * result + ( getStoreId() == null ? 0 : this.getStoreId().hashCode() );
-         result = 37 * result + ( getBillId() == null ? 0 : this.getBillId().hashCode() );
-         return result;
-   }   
-
-
-
-
+		result = 37 * result
+				+ (getStoreId() == null ? 0 : this.getStoreId().hashCode());
+		result = 37 * result
+				+ (getBillId() == null ? 0 : this.getBillId().hashCode());
+		return result;
+	}
 
 }
