@@ -1,61 +1,77 @@
 package com.smj.orm;
 
- 
-public class CommdSaleTotal implements java.io.Serializable {
 
-	// Fields
 
-	private Integer storeId;
-	private Integer commdId;
-	private Integer commdSaleNum;
-	private Double commdSaleAmt;
+/**
+ * CommdSaleTotal entity. @author MyEclipse Persistence Tools
+ */
 
-	// Constructors
+public class CommdSaleTotal  implements java.io.Serializable {
 
-	/** default constructor */
-	public CommdSaleTotal() {
-	}
 
-	/** full constructor */
-	public CommdSaleTotal(Integer commdId, Integer commdSaleNum,
-			Double commdSaleAmt) {
-		this.commdId = commdId;
-		this.commdSaleNum = commdSaleNum;
-		this.commdSaleAmt = commdSaleAmt;
-	}
+    // Fields    
 
-	// Property accessors
+     private Integer storeId;
+     private Integer commdId;
+     private Integer commdSaleNum;
+     private Double commdSaleAmt;
 
-	public Integer getStoreId() {
-		return this.storeId;
-	}
 
-	public void setStoreId(Integer storeId) {
-		this.storeId = storeId;
-	}
+    // Constructors
 
-	public Integer getCommdId() {
-		return this.commdId;
-	}
+    /** default constructor */
+    public CommdSaleTotal() {
+    }
 
-	public void setCommdId(Integer commdId) {
-		this.commdId = commdId;
-	}
+    
+    /** full constructor */
+    public CommdSaleTotal(Integer commdId, Integer commdSaleNum, Double commdSaleAmt) {
+        this.commdId = commdId;
+        this.commdSaleNum = commdSaleNum;
+        this.commdSaleAmt = commdSaleAmt;
+    }
 
-	public Integer getCommdSaleNum() {
-		return this.commdSaleNum;
-	}
+   
+    // Property accessors
 
-	public void setCommdSaleNum(Integer commdSaleNum) {
-		this.commdSaleNum = commdSaleNum;
-	}
+    public Integer getStoreId() {
+        return this.storeId;
+    }
+    
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
 
-	public Double getCommdSaleAmt() {
-		return this.commdSaleAmt;
-	}
+    public Integer getCommdId() {
+        return this.commdId;
+    }
+    
+    public void setCommdId(Integer commdId) {
+        this.commdId = commdId;
+    }
 
-	public void setCommdSaleAmt(Double commdSaleAmt) {
-		this.commdSaleAmt = commdSaleAmt;
-	}
+    public Integer getCommdSaleNum() {
+        return this.commdSaleNum;
+    }
+    
+    public void setCommdSaleNum(Integer commdSaleNum) {
+        this.commdSaleNum = commdSaleNum;
+    }
+
+    public Double getCommdSaleAmt() {
+        return this.commdSaleAmt;
+    }
+    
+    public void setCommdSaleAmt(Double commdSaleAmt) {
+        this.commdSaleAmt = commdSaleAmt;
+    }
+   
+
+
+
+
+
+
+
 
 }

@@ -2,69 +2,82 @@ package com.smj.orm;
 
 import java.util.Date;
 
- 
 
-public class BillDetail implements java.io.Serializable {
+/**
+ * BillDetail entity. @author MyEclipse Persistence Tools
+ */
 
-	// Fields
+public class BillDetail  implements java.io.Serializable {
 
-	private BillDetailId id;
-	private Date billDate;
-	private Integer commdId;
-	private Integer commdNum;
 
-	// Constructors
+    // Fields    
 
-	/** default constructor */
-	public BillDetail() {
-	}
+     private BillDetailId id;
+     private Date billDate;
+     private Integer commdId;
+     private Integer commdNum;
+
+
+    // Constructors
+
+    /** default constructor */
+    public BillDetail() {
+    }
 
 	/** minimal constructor */
-	public BillDetail(BillDetailId id) {
-		this.id = id;
-	}
+    public BillDetail(BillDetailId id) {
+        this.id = id;
+    }
+    
+    /** full constructor */
+    public BillDetail(BillDetailId id, Date billDate, Integer commdId, Integer commdNum) {
+        this.id = id;
+        this.billDate = billDate;
+        this.commdId = commdId;
+        this.commdNum = commdNum;
+    }
 
-	/** full constructor */
-	public BillDetail(BillDetailId id, Date billDate, Integer commdId,
-			Integer commdNum) {
-		this.id = id;
-		this.billDate = billDate;
-		this.commdId = commdId;
-		this.commdNum = commdNum;
-	}
+   
+    // Property accessors
 
-	// Property accessors
+    public BillDetailId getId() {
+        return this.id;
+    }
+    
+    public void setId(BillDetailId id) {
+        this.id = id;
+    }
 
-	public BillDetailId getId() {
-		return this.id;
-	}
+    public Date getBillDate() {
+        return this.billDate;
+    }
+    
+    public void setBillDate(Date billDate) {
+        this.billDate = billDate;
+    }
 
-	public void setId(BillDetailId id) {
-		this.id = id;
-	}
+    public Integer getCommdId() {
+        return this.commdId;
+    }
+    
+    public void setCommdId(Integer commdId) {
+        this.commdId = commdId;
+    }
 
-	public Date getBillDate() {
-		return this.billDate;
-	}
+    public Integer getCommdNum() {
+        return this.commdNum;
+    }
+    
+    public void setCommdNum(Integer commdNum) {
+        this.commdNum = commdNum;
+    }
+   
 
-	public void setBillDate(Date billDate) {
-		this.billDate = billDate;
-	}
 
-	public Integer getCommdId() {
-		return this.commdId;
-	}
 
-	public void setCommdId(Integer commdId) {
-		this.commdId = commdId;
-	}
 
-	public Integer getCommdNum() {
-		return this.commdNum;
-	}
 
-	public void setCommdNum(Integer commdNum) {
-		this.commdNum = commdNum;
-	}
+
+
 
 }

@@ -1,115 +1,128 @@
 package com.smj.orm;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
- 
 
-public class Appriase implements java.io.Serializable {
+/**
+ * Appriase entity. @author MyEclipse Persistence Tools
+ */
 
-	// Fields
+public class Appriase  implements java.io.Serializable {
 
-	private Integer appriId;
-	private Integer storeId;
-	private String appriContent;
-	private Integer speed;
-	private Integer integrity;
-	private Integer service;
-	private Date date;
-	private String isValidate;
-	private String isAsk;
 
-	// Constructors
+    // Fields    
 
-	/** default constructor */
-	public Appriase() {
-	}
+     private Integer appriId;
+     private Integer storeId;
+     private String appriContent;
+     private Integer speed;
+     private Integer integrity;
+     private Integer service;
+     private Timestamp date;
+     private String isValidate;
+     private String isAsk;
 
-	/** full constructor */
-	public Appriase(Integer storeId, String appriContent, Integer speed,
-			Integer integrity, Integer service, Date date, String isValidate,
-			String isAsk) {
-		this.storeId = storeId;
-		this.appriContent = appriContent;
-		this.speed = speed;
-		this.integrity = integrity;
-		this.service = service;
-		this.date = date;
-		this.isValidate = isValidate;
-		this.isAsk = isAsk;
-	}
 
-	// Property accessors
+    // Constructors
 
-	public Integer getAppriId() {
-		return this.appriId;
-	}
+    /** default constructor */
+    public Appriase() {
+    }
 
-	public void setAppriId(Integer appriId) {
-		this.appriId = appriId;
-	}
+    
+    /** full constructor */
+    public Appriase(Integer storeId, String appriContent, Integer speed, Integer integrity, Integer service, Timestamp date, String isValidate, String isAsk) {
+        this.storeId = storeId;
+        this.appriContent = appriContent;
+        this.speed = speed;
+        this.integrity = integrity;
+        this.service = service;
+        this.date = date;
+        this.isValidate = isValidate;
+        this.isAsk = isAsk;
+    }
 
-	public Integer getStoreId() {
-		return this.storeId;
-	}
+   
+    // Property accessors
 
-	public void setStoreId(Integer storeId) {
-		this.storeId = storeId;
-	}
+    public Integer getAppriId() {
+        return this.appriId;
+    }
+    
+    public void setAppriId(Integer appriId) {
+        this.appriId = appriId;
+    }
 
-	public String getAppriContent() {
-		return this.appriContent;
-	}
+    public Integer getStoreId() {
+        return this.storeId;
+    }
+    
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
 
-	public void setAppriContent(String appriContent) {
-		this.appriContent = appriContent;
-	}
+    public String getAppriContent() {
+        return this.appriContent;
+    }
+    
+    public void setAppriContent(String appriContent) {
+        this.appriContent = appriContent;
+    }
 
-	public Integer getSpeed() {
-		return this.speed;
-	}
+    public Integer getSpeed() {
+        return this.speed;
+    }
+    
+    public void setSpeed(Integer speed) {
+        this.speed = speed;
+    }
 
-	public void setSpeed(Integer speed) {
-		this.speed = speed;
-	}
+    public Integer getIntegrity() {
+        return this.integrity;
+    }
+    
+    public void setIntegrity(Integer integrity) {
+        this.integrity = integrity;
+    }
 
-	public Integer getIntegrity() {
-		return this.integrity;
-	}
+    public Integer getService() {
+        return this.service;
+    }
+    
+    public void setService(Integer service) {
+        this.service = service;
+    }
 
-	public void setIntegrity(Integer integrity) {
-		this.integrity = integrity;
-	}
+    public Timestamp getDate() {
+        return this.date;
+    }
+    
+    public void setDate(Timestamp date) {
+        this.date = date;
+    }
 
-	public Integer getService() {
-		return this.service;
-	}
+    public String getIsValidate() {
+        return this.isValidate;
+    }
+    
+    public void setIsValidate(String isValidate) {
+        this.isValidate = isValidate;
+    }
 
-	public void setService(Integer service) {
-		this.service = service;
-	}
+    public String getIsAsk() {
+        return this.isAsk;
+    }
+    
+    public void setIsAsk(String isAsk) {
+        this.isAsk = isAsk;
+    }
+   
 
-	public Date getDate() {
-		return this.date;
-	}
 
-	public void setDate(Date date) {
-		this.date = date;
-	}
 
-	public String getIsValidate() {
-		return this.isValidate;
-	}
 
-	public void setIsValidate(String isValidate) {
-		this.isValidate = isValidate;
-	}
 
-	public String getIsAsk() {
-		return this.isAsk;
-	}
 
-	public void setIsAsk(String isAsk) {
-		this.isAsk = isAsk;
-	}
+
 
 }

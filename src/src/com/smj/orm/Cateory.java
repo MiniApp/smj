@@ -1,72 +1,87 @@
 package com.smj.orm;
 
- 
 
-public class Cateory implements java.io.Serializable {
 
-	// Fields
+/**
+ * Cateory entity. @author MyEclipse Persistence Tools
+ */
 
-	private Integer cateId;
-	private Integer name;
-	private Integer parentId;
-	private Integer classId;
-	private Integer deleted;
+public class Cateory  implements java.io.Serializable {
 
-	// Constructors
 
-	/** default constructor */
-	public Cateory() {
-	}
+    // Fields    
 
-	/** full constructor */
-	public Cateory(Integer name, Integer parentId, Integer classId,
-			Integer deleted) {
-		this.name = name;
-		this.parentId = parentId;
-		this.classId = classId;
-		this.deleted = deleted;
-	}
+     private Integer cateId;
+     private Integer name;
+     private Integer parentId;
+     private Integer catgrade;
+     private Integer deleted;
 
-	// Property accessors
 
-	public Integer getCateId() {
-		return this.cateId;
-	}
+    // Constructors
 
-	public void setCateId(Integer cateId) {
-		this.cateId = cateId;
-	}
+    /** default constructor */
+    public Cateory() {
+    }
 
-	public Integer getName() {
-		return this.name;
-	}
+    
+    /** full constructor */
+    public Cateory(Integer name, Integer parentId, Integer catgrade, Integer deleted) {
+        this.name = name;
+        this.parentId = parentId;
+        this.catgrade = catgrade;
+        this.deleted = deleted;
+    }
 
-	public void setName(Integer name) {
-		this.name = name;
-	}
+   
+    // Property accessors
 
-	public Integer getParentId() {
-		return this.parentId;
-	}
+    public Integer getCateId() {
+        return this.cateId;
+    }
+    
+    public void setCateId(Integer cateId) {
+        this.cateId = cateId;
+    }
 
-	public void setParentId(Integer parentId) {
-		this.parentId = parentId;
-	}
+    public Integer getName() {
+        return this.name;
+    }
+    
+    public void setName(Integer name) {
+        this.name = name;
+    }
 
-	public Integer getClassId() {
-		return this.classId;
-	}
+    public Integer getParentId() {
+        return this.parentId;
+    }
+    
+    public void setParentId(Integer parentId) {
+        this.parentId = parentId;
+    }
 
-	public void setClassId(Integer classId) {
-		this.classId = classId;
-	}
+    public Integer getCatgrade() {
+        return this.catgrade;
+    }
+    
+    public void setCatgrade(Integer catgrade) {
+        this.catgrade = catgrade;
+    }
 
-	public Integer getDeleted() {
-		return this.deleted;
-	}
+    public Integer getDeleted() {
+        return this.deleted;
+    }
+    
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+   
 
-	public void setDeleted(Integer deleted) {
-		this.deleted = deleted;
-	}
+
+
+
+
+
+
 
 }

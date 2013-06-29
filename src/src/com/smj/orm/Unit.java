@@ -1,53 +1,67 @@
 package com.smj.orm;
 
+
+
 /**
  * Unit entity. @author MyEclipse Persistence Tools
  */
 
-public class Unit implements java.io.Serializable {
+public class Unit  implements java.io.Serializable {
 
-	// Fields
 
-	private Integer UId;
-	private String name;
-	private Integer deleted;
+    // Fields    
 
-	// Constructors
+     private Integer UId;
+     private String name;
+     private Integer deleted;
 
-	/** default constructor */
-	public Unit() {
-	}
 
-	/** full constructor */
-	public Unit(String name, Integer deleted) {
-		this.name = name;
-		this.deleted = deleted;
-	}
+    // Constructors
 
-	// Property accessors
+    /** default constructor */
+    public Unit() {
+    }
 
-	public Integer getUId() {
-		return this.UId;
-	}
+    
+    /** full constructor */
+    public Unit(String name, Integer deleted) {
+        this.name = name;
+        this.deleted = deleted;
+    }
 
-	public void setUId(Integer UId) {
-		this.UId = UId;
-	}
+   
+    // Property accessors
 
-	public String getName() {
-		return this.name;
-	}
+    public Integer getUId() {
+        return this.UId;
+    }
+    
+    public void setUId(Integer UId) {
+        this.UId = UId;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return this.name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public Integer getDeleted() {
-		return this.deleted;
-	}
+    public Integer getDeleted() {
+        return this.deleted;
+    }
+    
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+   
 
-	public void setDeleted(Integer deleted) {
-		this.deleted = deleted;
-	}
+
+
+
+
+
+
 
 }

@@ -22,7 +22,7 @@
 		
 		<action attribute="registerForm" input="/user/register.jsp" name="registerForm"
 			parameter="method" path="/registerAction" scope="request"
-			type="com.sugu.snack.web.action.RegisterAction">
+			type="com.smj.web.action.RegisterAction">
 			<forward name="index" path="/user/index.jsp" />
 			<forward name="register" path="/user/register.jsp" />
 		</action>

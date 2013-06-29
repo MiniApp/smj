@@ -1,71 +1,75 @@
 package com.smj.orm;
 
- 
 
-public class CommInfoId implements java.io.Serializable {
 
-	// Fields
+/**
+ * CommInfoId entity. @author MyEclipse Persistence Tools
+ */
 
-	private Integer commdId;
-	private Integer storeId;
+public class CommInfoId  implements java.io.Serializable {
 
-	// Constructors
 
-	/** default constructor */
-	public CommInfoId() {
-	}
+    // Fields    
 
-	/** full constructor */
-	public CommInfoId(Integer commdId, Integer storeId) {
-		this.commdId = commdId;
-		this.storeId = storeId;
-	}
+     private Integer commdId;
+     private Integer storeId;
 
-	// Property accessors
 
-	public Integer getCommdId() {
-		return this.commdId;
-	}
+    // Constructors
 
-	public void setCommdId(Integer commdId) {
-		this.commdId = commdId;
-	}
+    /** default constructor */
+    public CommInfoId() {
+    }
 
-	public Integer getStoreId() {
-		return this.storeId;
-	}
+    
+    /** full constructor */
+    public CommInfoId(Integer commdId, Integer storeId) {
+        this.commdId = commdId;
+        this.storeId = storeId;
+    }
 
-	public void setStoreId(Integer storeId) {
-		this.storeId = storeId;
-	}
+   
+    // Property accessors
 
-	public boolean equals(Object other) {
-		if ((this == other))
-			return true;
-		if ((other == null))
-			return false;
-		if (!(other instanceof CommInfoId))
-			return false;
-		CommInfoId castOther = (CommInfoId) other;
+    public Integer getCommdId() {
+        return this.commdId;
+    }
+    
+    public void setCommdId(Integer commdId) {
+        this.commdId = commdId;
+    }
 
-		return ((this.getCommdId() == castOther.getCommdId()) || (this
-				.getCommdId() != null
-				&& castOther.getCommdId() != null && this.getCommdId().equals(
-				castOther.getCommdId())))
-				&& ((this.getStoreId() == castOther.getStoreId()) || (this
-						.getStoreId() != null
-						&& castOther.getStoreId() != null && this.getStoreId()
-						.equals(castOther.getStoreId())));
-	}
+    public Integer getStoreId() {
+        return this.storeId;
+    }
+    
+    public void setStoreId(Integer storeId) {
+        this.storeId = storeId;
+    }
+   
 
-	public int hashCode() {
-		int result = 17;
 
-		result = 37 * result
-				+ (getCommdId() == null ? 0 : this.getCommdId().hashCode());
-		result = 37 * result
-				+ (getStoreId() == null ? 0 : this.getStoreId().hashCode());
-		return result;
-	}
+
+   public boolean equals(Object other) {
+         if ( (this == other ) ) return true;
+		 if ( (other == null ) ) return false;
+		 if ( !(other instanceof CommInfoId) ) return false;
+		 CommInfoId castOther = ( CommInfoId ) other; 
+         
+		 return ( (this.getCommdId()==castOther.getCommdId()) || ( this.getCommdId()!=null && castOther.getCommdId()!=null && this.getCommdId().equals(castOther.getCommdId()) ) )
+ && ( (this.getStoreId()==castOther.getStoreId()) || ( this.getStoreId()!=null && castOther.getStoreId()!=null && this.getStoreId().equals(castOther.getStoreId()) ) );
+   }
+   
+   public int hashCode() {
+         int result = 17;
+         
+         result = 37 * result + ( getCommdId() == null ? 0 : this.getCommdId().hashCode() );
+         result = 37 * result + ( getStoreId() == null ? 0 : this.getStoreId().hashCode() );
+         return result;
+   }   
+
+
+
+
 
 }
