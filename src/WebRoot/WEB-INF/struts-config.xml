@@ -18,6 +18,12 @@
 			type="com.sugu.snack.web.action.UserAction">
 			<forward name="register" path="/user/register.jsp" />
 			<forward name="userInfo" path="/user/userInfo.jsp" />
+			<forward name="userOrderList" path="/user/userOrder.jsp" />
+			<forward name="userAppList" path="/user/userAppList.jsp" />
+			<forward name="favorite" path="/user/userFavorite.jsp" />
+			<forward name="userAddress" path="/user/userAddress.jsp" />
+			<forward name="addUserAddress" path="/user/userAddressAdd.jsp" />
+			<forward name="leaveWordList" path="/user/userLeaveWord.jsp" />
 		</action>
 		
 		<action attribute="registerForm" input="/user/register.jsp" name="registerForm"

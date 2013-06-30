@@ -39,7 +39,7 @@ import com.smj.web.form.RegisterForm;
  * <li>查询密码-getPassword</li>
  * <li>修改密码-updatePassword</li>
  * <li>公告管理-getAnnounceList</li>
- * <li>发布管理-addAnnounce</li>
+ * <li>发布公告-addAnnounce</li>
  * 
  * @author 苏皓
  * @since 2013-06-25

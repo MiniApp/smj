@@ -7,7 +7,7 @@
 <title>尚佰味网 - 天津外卖|网上订餐|快餐网|盒饭便当配送</title>
 	<meta name="Description" content="尚佰味网为您提供丰富的外卖,盒饭菜谱，您可以通过网上订餐，电话订餐等方式订到喜欢的饭菜。为您奉献天津24小时送餐业务。使您随时随地能吃上可口的饭菜。" />
 	<meta name="Keywords" content="sunbyway,天津快餐,天津外卖,天津订餐,天津送餐,天津美食,天津小吃,外卖网,送餐网,快餐,盒饭,网上订餐,天津24小时外卖,外卖电话,盒饭配送,快餐外卖,快餐送餐,尚佰味网,尚佰味" />
-	<link rel="shortcut icon" href="${ctx}/favicon.ico">
+	<link rel="shortcut icon" href="${ctx}/favicon.ico" />
 	<script type="text/javascript" src="${ctx}/js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="${ctx}/js/WdatePicker.js"></script>
 	<script type="text/javascript" src="${ctx}/js/thickbox-compressed.js" ></script>

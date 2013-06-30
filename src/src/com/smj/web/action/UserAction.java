@@ -1,14 +1,7 @@
 package com.smj.web.action;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -30,9 +23,16 @@ import com.smj.util.MD5;
 import com.smj.web.form.UserLoginForm;
 
 /**
- * 用户Action
+ * 用户UserAction
+ * <p/>
+ * 功能描述：
+ * <li>开通店铺-addStore</li>
  * 
- * @author Fengyu
+ * @author 苏皓
+ * @since 2013-06-29
+ * @修改日期:
+ * @版本： 1.0
+ * 
  */
 public class UserAction extends BaseAction {
 	private static final Log logger = LogFactory.getLog(UserAction.class);
@@ -216,5 +216,94 @@ public class UserAction extends BaseAction {
 		ActionForward forward = mapping.findForward("userInfo");
 		return forward;
 	}
+	
+	/**
+	 * 开通店铺
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-29
+	 */
+	public ActionForward getUserOrderList(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.debug("UserAction.getUserOrderList start");
+		ActionForward forward = mapping.findForward("userOrderList");
+		logger.debug("UserAction.getUserOrderList end");
+		return forward;
+	}
+	
+	/**
+	 * 我的评价
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-29
+	 */
+	public ActionForward userAppList(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.debug("UserAction.userAppList start");
+		ActionForward forward = mapping.findForward("userAppList");
+		logger.debug("UserAction.userAppList end");
+		return forward;
+	}
+	
+	/**
+	 * 我的收藏
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-29
+	 */
+	public ActionForward favorite(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.debug("UserAction.favorite start");
+		ActionForward forward = mapping.findForward("favorite");
+		logger.debug("UserAction.favorite end");
+		return forward;
+	}
 
+	/**
+	 * 收货地址
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-29
+	 */
+	public ActionForward userAddress(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.debug("UserAction.userAddress start");
+		ActionForward forward = mapping.findForward("userAddress");
+		logger.debug("UserAction.userAddress end");
+		return forward;
+	}
+	
+	/**
+	 * 增加收货地址
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-29
+	 */
+	public ActionForward addUserAddress(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.debug("UserAction.addUserAddress start");
+		ActionForward forward = mapping.findForward("addUserAddress");
+		logger.debug("UserAction.addUserAddress end");
+		return forward;
+	}
+	
+	/**
+	 * 我的留言
+	 * 
+	 * @author 苏皓
+	 * @since 2013-06-29
+	 */
+	public ActionForward leaveWordList(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response)
+			throws Exception {
+		logger.debug("UserAction.leaveWordList start");
+		ActionForward forward = mapping.findForward("leaveWordList");
+		logger.debug("UserAction.leaveWordList end");
+		return forward;
+	}
 }
