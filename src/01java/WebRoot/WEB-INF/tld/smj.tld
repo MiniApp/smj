@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+ <description>smj 1.0 core library</description>
+ <display-name>smj core</display-name>
+ <tlib-version>1.0</tlib-version>
+ <short-name>smj</short-name>
+ <uri>http://smj.snack.com/smj</uri>
+ <function>
+  <description>超长字符串处理</description>
+  <name>disposeLongStr</name>
+  <function-class>com.smj.taglib.Function</function-class>
+  <function-signature>java.lang.String DisposeLongStr(int,java.lang.String)</function-signature>
+ </function>
+ <function>
+  <description>系统字典替换</description>
+  <name>sysDictionary</name>
+  <function-class>com.smj.taglib.Function</function-class>
+  <function-signature>java.lang.String SysDictionary(java.lang.String,java.lang.String)</function-signature>
+ </function>
+ <function>
+  <description>特殊字符转译</description>
+  <name>htmlSpecialChars</name>
+  <function-class>com.smj.taglib.Function</function-class>
+  <function-signature>java.lang.String HtmlSpecialChars(java.lang.String)</function-signature>
+ </function>
+ <function>
+  <description>信用等级图片</description>
+  <name>rankPic</name>
+  <function-class>com.smj.taglib.Function</function-class>
+  <function-signature>java.lang.String RankPic(int,java.lang.String)</function-signature>
+ </function>
+ 	<function>
+		<description>分页</description>
+		<name>htmlPages</name>
+		<function-class>com.smj.taglib.Function</function-class>
+		<function-signature>java.lang.String HtmlPages(int,int)</function-signature>
+	</function>
+</taglib>

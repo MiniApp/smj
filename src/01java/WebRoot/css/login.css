@@ -1,0 +1,18 @@
+/*************************************************GLOBALS***/
+* { word-wrap: break-word; word-break: break-all; }
+body, th, td, input, select, textarea, button { font: 12px/1.5em Verdana, "Lucida Grande", Arial, Helvetica, sans-serif; }
+body, h1, h2, h3, h4, h5, h6, p, ul, dl, dt, dd, form, fieldset { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+
+caption, th { text-align: left; }
+caption { font-size: 14px; font-weight: bold; }
+caption p { font-weight: normal; }
+/*************************************************TASK***/
+.submit { padding: 0 5px; height: 24px; border: none; background: #FF8901; color: #FFF; line-height: 20px; letter-spacing: 1px; cursor: pointer; }
+.c_form { padding: 0.5em 3em; }
+.formtable {margin:0 auto 10px; width:920px;}
+.formtable caption { padding: 10px 0; color: #666; font-size: 12px; }
+.formtable caption h2 { padding-bottom: 8px; border-bottom: 1px solid #CCC; color: #333; font-size: 14px; }
+.formtable caption p { margin-top: 8px; }
+.formtable td, .formtable th { padding: 5px; }
+.formtable th { padding-right: 1em; text-align: right; }

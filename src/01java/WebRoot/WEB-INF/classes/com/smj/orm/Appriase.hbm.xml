@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.smj.orm.Appriase" table="appriase" catalog="onlinesupermarket">
+        <id name="appriId" type="java.lang.Integer">
+            <column name="appri_id" />
+            <generator class="identity" />
+        </id>
+        <property name="storeId" type="java.lang.Integer">
+            <column name="store_id" />
+        </property>
+        <property name="appriContent" type="java.lang.String">
+            <column name="appri_content" length="200" />
+        </property>
+        <property name="speed" type="java.lang.Integer">
+            <column name="speed" />
+        </property>
+        <property name="integrity" type="java.lang.Integer">
+            <column name="integrity" />
+        </property>
+        <property name="service" type="java.lang.Integer">
+            <column name="service" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="date" length="19" />
+        </property>
+        <property name="isValidate" type="java.lang.String">
+            <column name="is_validate" length="5" />
+        </property>
+        <property name="isAsk" type="java.lang.String">
+            <column name="is_ask" length="5" />
+        </property>
+    </class>
+</hibernate-mapping>

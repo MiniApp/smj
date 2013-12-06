@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<data-sources />
+	<form-beans>
+		<form-bean name="userLoginForm" type="com.smj.web.form.UserLoginForm" />
+		<form-bean name="registerForm" type="com.smj.web.form.RegisterForm" />
+	</form-beans>
+	<global-exceptions /> 
+	<global-forwards>
+	  	  <forward name="info" path="/commons/info.jsp" />	
+	</global-forwards>
+	<action-mappings>
+		<action attribute="userLoginForm" input="/user/index.jsp" name="userLoginForm"
+			parameter="method" path="/userAction" scope="request"
+			type="com.smj.web.action.UserAction">
+			<forward name="index" path="/user/index.jsp" />
+			<forward name="login" path="/user/login.jsp" />
+			<forward name="register" path="/user/register.jsp" />
+			<forward name="userInfo" path="/user/userInfo.jsp" />
+			<forward name="commdInfo" path="/user/commdInfo.jsp" />
+			<forward  name="mlogin" path="/merchant/mlogin.jsp" />
+			<forward name="commodity" path="/user/commodity.jsp"/>
+			<forward name="createbill" path="/user/createBill.jsp" />
+			<forward name="forgotpwd" path="/user/getPassword.jsp" />
+			<forward name="userOrderList" path="/user/userOrder.jsp" />
+			<forward name="userAppList" path="/user/userAppList.jsp" />
+			<forward name="favorite" path="/user/userFavorite.jsp" />
+			<forward name="userAddress" path="/user/userAddress.jsp" />
+			<forward name="addUserAddress" path="/user/userAddressAdd.jsp" />
+			<forward name="leavewordList" path="/user/leavewordList.jsp" />		    
+			<forward name="userLeaveWordList" path="/user/userLeaveWord.jsp"/>
+			<forward name="userAddresss" redirect="true" path="/userAction.do?method=userAddress" />
+			<forward name="message" path="/message.jsp" />
+		</action>
+		
+		<action attribute="registerForm" input="/user/register.jsp" name="registerForm"
+			parameter="method" path="/registerAction" scope="request"
+			type="com.smj.web.action.RegisterAction">
+			<forward name="index" path="/user/index.jsp" />
+			<forward name="register" path="/user/register.jsp" />
+		</action>
+	
+       <action
+			parameter="method" path="/merchantAction" scope="request" name="registerForm"
+			type="com.smj.web.action.MerchantAction">
+			<forward name="index" path="/merchant/index.jsp"></forward>
+			<forward name="mregister" path="/merchant/mregister.jsp"></forward>
+			<forward name="addStore" path="/merchant/addStore.jsp" />
+			<forward name="addAnnounce1" path="/merchant/addAnnounce.jsp"/>
+			<forward name="getStoreInfo" path="/merchant/storeInfo.jsp" />
+			<forward name="productManager" path="/merchant/productManager.jsp" />
+			<forward name="addProduct" path="/merchant/addProduct.jsp" />
+			<forward name="updateProduct" path="/merchant/updateProduct.jsp" />
+			<forward name="deleteProduct" redirect="true" path="/merchantAction.do?method=productManager" />
+			<forward name="orderManager" path="/merchant/orderManager.jsp" />
+			<forward name="orderSearch" path="/merchant/orderManager.jsp" />
+			<forward name="getOrderDetail" path="/merchant/orderManager.jsp" />
+			<forward name="userAppManager" path="/merchant/userAppManager.jsp" />
+			<forward name="getMerchantInfo" path="/merchant/merchantInfo.jsp" />
+			<forward name="leaveWordManager" path="/merchant/leaveWordManager.jsp" />
+			<forward name="getPassword" path="/merchant/updatePwd.jsp" />
+			<forward name="getAnnounceList" path="/merchant/announceList.jsp" />
+			<forward name="show" path="/merchant/addAnnounce.jsp" />
+			<forward name="save" path="/merchant/announceList.jsp" />
+			<forward name="joinSucc" path="/merchant/joinSucc.jsp" />
+			<forward name="addSotreSucc" path="/merchant/addStoreSucc.jsp" />
+			<forward  name="mlogin" path="/merchant/mlogin.jsp" />
+			<forward name="storeinfos" redirect="true" path="/merchantAction.do?method=getStoreInfo"/>
+			<forward name="merchantinfo" redirect="true" path="/merchantAction.do?method=getMerchantInfo" />
+			<forward name="afficheinfo" redirect="true" path="/merchantAction.do?method=getAnnounceList" />
+		</action>
+	    
+       <action parameter="method" path="/systemAction" scope="request" type="com.smj.web.action.SystemAction">
+	        <forward name="slogin" path="/system/login.jsp" />
+	        <forward name="smjindex" path="/system/index.jsp" />
+	        <forward name="mer_manager" path="/system/merchant_manager.jsp" />
+	        <forward name="cate_manager" path="/system/cateory_manager.jsp" />
+	        <forward name="cus_manager" path="/system/customer_manager.jsp"/>
+	        <forward name="find_bill" path="/system/billInfo.jsp"/>
+	   </action>
+	    
+	    
+	    
+	    
+	    
+	</action-mappings>
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+
+	<message-resources parameter="ApplicationResources" />
+
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="classpath:applicationContext.xml" />
+	</plug-in>
+
+</struts-config>

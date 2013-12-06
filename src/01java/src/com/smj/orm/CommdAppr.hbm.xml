@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="com.smj.orm.CommdAppr" table="commd_appr" catalog="onlinesupermarket">
+        <id name="UId" type="java.lang.Integer">
+            <column name="u_id" />
+            <generator class="identity" />
+        </id>
+        <property name="commdId" type="java.lang.Integer">
+            <column name="commd_id" />
+        </property>
+        <property name="storeId" type="java.lang.Integer">
+            <column name="store_id" />
+        </property>
+        <property name="integral" type="java.lang.Integer">
+            <column name="integral" />
+        </property>
+        <property name="taste" type="java.lang.String">
+            <column name="taste" length="50" />
+        </property>
+        <property name="content" type="java.lang.String">
+            <column name="content" length="200" />
+        </property>
+        <property name="date" type="java.util.Date">
+            <column name="date" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
