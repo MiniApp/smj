@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50151
 File Encoding         : 65001
 
-Date: 2013-11-27 10:39:05
+Date: 2013-12-06 21:17:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -152,7 +152,7 @@ CREATE TABLE `cateory` (
   `deleted` int(11) DEFAULT NULL,
   PRIMARY KEY (`cate_id`),
   KEY `Index_1` (`cate_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100109 DEFAULT CHARSET=utf8 COMMENT='商品类别表';
+) ENGINE=InnoDB AUTO_INCREMENT=100102 DEFAULT CHARSET=utf8 COMMENT='商品类别表';
 
 -- ----------------------------
 -- Records of cateory
@@ -259,13 +259,6 @@ INSERT INTO `cateory` VALUES ('100098', '汤料', '1112', '11128', '1');
 INSERT INTO `cateory` VALUES ('100099', '地方特产', '1', '1113', '1');
 INSERT INTO `cateory` VALUES ('100100', '西南', '1113', '11131', '1');
 INSERT INTO `cateory` VALUES ('100101', 'ROOT', '-1', '0', '1');
-INSERT INTO `cateory` VALUES ('100102', '衣服', '0', '2', '1');
-INSERT INTO `cateory` VALUES ('100103', 'type1', '2', '221', '1');
-INSERT INTO `cateory` VALUES ('100104', 'type11', '221', '2211', '1');
-INSERT INTO `cateory` VALUES ('100105', 'type12', '221', '2212', '1');
-INSERT INTO `cateory` VALUES ('100106', 'type2', '2', '222', '1');
-INSERT INTO `cateory` VALUES ('100107', 'type21', '222', '2221', '1');
-INSERT INTO `cateory` VALUES ('100108', 'type111', '2211', '22111', '1');
 
 -- ----------------------------
 -- Table structure for `commd_appr`
@@ -335,19 +328,25 @@ CREATE TABLE `comm_info` (
   `commd_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL,
   `commd_name` varchar(50) DEFAULT NULL,
-  `one_dimension` varchar(19) DEFAULT NULL,
-  `two_dimension` varchar(19) DEFAULT NULL,
+  `commd_fullname` varchar(100) DEFAULT NULL,
   `commd_logo` varchar(50) DEFAULT NULL,
   `img1` varchar(100) DEFAULT NULL,
   `img2` varchar(100) DEFAULT NULL,
   `img3` varchar(100) DEFAULT NULL,
+  `one_dimension` varchar(19) DEFAULT NULL,
+  `two_dimension` varchar(19) DEFAULT NULL,
+  `styleId` varchar(20) DEFAULT NULL,
+  `brand_id` int(11) DEFAULT NULL,
   `u_id` int(11) DEFAULT NULL,
   `cate_id` int(11) DEFAULT NULL,
-  `brand_id` int(11) DEFAULT NULL,
   `commd_weight` varchar(10) DEFAULT NULL,
+  `prodstatcode` varchar(50) DEFAULT NULL,
   `commd_license` varchar(18) DEFAULT NULL,
+  `manufactenterpric` varchar(50) DEFAULT NULL,
   `commd_crea_date` varchar(10) DEFAULT NULL,
   `commd_produce_place` varchar(5) DEFAULT NULL,
+  `material` varchar(50) DEFAULT NULL,
+  `netcontent` varchar(50) DEFAULT NULL,
   `commd_size` varchar(200) DEFAULT NULL,
   `commd_description` varchar(200) DEFAULT NULL,
   `supplier` varchar(50) DEFAULT NULL,
@@ -370,17 +369,18 @@ CREATE TABLE `comm_info` (
   `remark4` varchar(200) DEFAULT NULL,
   `remark5` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`commd_id`,`store_id`),
-  KEY `Idx_commd` (`commd_id`)
+  KEY `Idx_commd` (`commd_id`),
+  KEY `Idx_dimension` (`one_dimension`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='商品信息表';
 
 -- ----------------------------
 -- Records of comm_info
 -- ----------------------------
-INSERT INTO `comm_info` VALUES ('345065686', '1', '测试', '6923450656860', '6923450656860', 'logo\\6923450656860_logo.jpg', 'image\\6923450656860_img1.jpg', 'image\\6923450656860_img2.jpg', 'image\\6923450656860_img3.jpg', '1', '1', '3', null, null, null, null, '15g', null, null, null, null, null, null, null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
-INSERT INTO `comm_info` VALUES ('408370593', '1', '茅台镇镇酒酱香型125ml53度', '6924083705932', null, '125ml_s1.jpg', null, null, null, '1', '1', '1', null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
-INSERT INTO `comm_info` VALUES ('408370753', '1', '茅台镇镇酒酱香型108ml53度', '6924083707533', null, '108ml_s1.jpg', null, null, null, '1', '1', '2', null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
-INSERT INTO `comm_info` VALUES ('408470547', '1', '茅台镇镇酒酱香型100ml53度', '6924084705475', null, '100ml_s1.jpg', '100ml 1.jpg', '100ml 2.jpg', '', '1', '221', '3', null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
-INSERT INTO `comm_info` VALUES ('408473333', '1', '茅台镇老坛', '6924084733333', null, 'lt_s1.jpg', null, null, null, '1', '1', '1', null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
+INSERT INTO `comm_info` VALUES ('40847333', '1', '茅台镇老坛', null, 'lt_s1.jpg', null, null, null, '6924084733333', null, null, '1', null, '1', null, null, null, null, null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
+INSERT INTO `comm_info` VALUES ('408370593', '1', '茅台镇镇酒酱香型125ml53度', null, '125ml_s1.jpg', null, null, null, '6924083705932', null, null, '2', null, '1', null, null, null, null, null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
+INSERT INTO `comm_info` VALUES ('408370753', '1', '茅台镇镇酒酱香型108ml53度', null, '108ml_s1.jpg', null, null, null, '6924083707533', null, null, '3', null, '1', null, null, null, null, null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
+INSERT INTO `comm_info` VALUES ('408470547', '1', '茅台镇镇酒酱香型100ml53度', null, '100ml_s1.jpg', '100ml 1.jpg', '100ml 2.jpg', '', '6924084705475', null, null, '4', null, '1', null, null, null, null, null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
+INSERT INTO `comm_info` VALUES ('408473333', '1', '茅台镇老坛', null, 'lt_s1.jpg', null, null, null, '6924084733333', null, null, '5', null, '1', null, null, null, null, null, null, null, null, null, null, null, '10.00', '10.00', '10.00', '10.00', null, null, null, null, null, null, '1', null, null, null, null, null, null, null);
 
 -- ----------------------------
 -- Table structure for `cust_info`
@@ -4083,12 +4083,11 @@ CREATE TABLE `unit` (
   `name` varchar(50) DEFAULT NULL,
   `deleted` int(11) DEFAULT NULL,
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='商品尺寸表';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='商品尺寸表';
 
 -- ----------------------------
 -- Records of unit
 -- ----------------------------
-INSERT INTO `unit` VALUES ('1', '瓶', '1');
 
 -- ----------------------------
 -- Table structure for `users`
@@ -4144,8 +4143,8 @@ INSERT INTO `user_address` VALUES ('9', '9', '辽宁省本溪市南芬区', 'Y')
 INSERT INTO `user_address` VALUES ('10', '10', '辽宁省本溪市南芬区', 'Y');
 INSERT INTO `user_address` VALUES ('11', '11', '辽宁省本溪市南芬区', 'Y');
 INSERT INTO `user_address` VALUES ('12', '12', '四川省成都市成华区', 'N');
-INSERT INTO `user_address` VALUES ('13', '12', '内蒙古省赤峰市元宝山区', 'N');
-INSERT INTO `user_address` VALUES ('14', '12', '北京省市崇文区', 'Y');
+INSERT INTO `user_address` VALUES ('13', '12', '内蒙古省赤峰市元宝山区', 'Y');
+INSERT INTO `user_address` VALUES ('14', '12', '北京省市崇文区', 'N');
 
 -- ----------------------------
 -- Table structure for `user_login_session`
